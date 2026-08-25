@@ -1,0 +1,561 @@
+.ddsh-file-roll {
+  --ddsh-file-accent: #9da8ba;
+  --ddsh-file-img-x: 50%;
+  --ddsh-file-img-y: 50%;
+  --ddsh-file-back-x: 50%;
+  --ddsh-file-back-y: 50%;
+  width: min(720px, calc(100% - 24px));
+  margin: 55px auto 0;
+  padding: 0 80px 28px 20px;
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  font-family: "Bai Jamjuree", sans-serif;
+  background: transparent;
+}
+.ddsh-file-roll *,
+.ddsh-file-roll *::before,
+.ddsh-file-roll *::after {
+  box-sizing: border-box;
+}
+.ddsh-file-dark {
+  --ddsh-file-window: #11151a;
+  --ddsh-file-toolbar: #232a32;
+  --ddsh-file-box: #14191f;
+  --ddsh-file-box-soft: #101419;
+  --ddsh-file-text: #bfc5cc;
+  --ddsh-file-text-soft: #6f7781;
+  --ddsh-file-title: #e3e6ea;
+  --ddsh-file-line: #343b44;
+  --ddsh-file-line-soft: #272e36;
+  --ddsh-file-shadow: rgba(0, 0, 0, 0.42);
+}
+.ddsh-file-light {
+  --ddsh-file-window: #f5f5f2;
+  --ddsh-file-toolbar: #e2e4e5;
+  --ddsh-file-box: #eeeeeb;
+  --ddsh-file-box-soft: #f7f7f4;
+  --ddsh-file-text: #34373a;
+  --ddsh-file-text-soft: #888d92;
+  --ddsh-file-title: #181a1c;
+  --ddsh-file-line: #b9bdc1;
+  --ddsh-file-line-soft: #d4d6d8;
+  --ddsh-file-shadow: rgba(28, 31, 34, 0.18);
+}
+.ddsh-file-back-photo {
+  width: 90%;
+  height: calc(100% - 150px);
+  position: absolute;
+  top: -35px;
+  right: 25px;
+  z-index: 0;
+  background-image: var(--ddsh-file-back-img, var(--ddsh-file-img));
+  background-size: cover;
+  background-position:
+    var(--ddsh-file-back-x)
+    var(--ddsh-file-back-y);
+  background-repeat: no-repeat;
+  filter:
+    grayscale(1)
+    contrast(1.05);
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.16);
+}
+.ddsh-file-window {
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  overflow: visible;
+  border: 1px solid var(--ddsh-file-line);
+  background: var(--ddsh-file-window);
+  box-shadow:
+    0 18px 38px var(--ddsh-file-shadow);
+}
+.ddsh-file-toolbar {
+  min-height: 51px;
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: 65px 1fr 65px;
+  align-items: center;
+  border-bottom: 1px solid var(--ddsh-file-line);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0)
+    ),
+    var(--ddsh-file-toolbar);
+}
+.ddsh-file-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.ddsh-file-dots span {
+  width: 7px;
+  height: 7px;
+  display: block;
+  border-radius: 50%;
+  background: var(--ddsh-file-text-soft);
+}
+.ddsh-file-dots span:nth-child(2) {
+  opacity: 0.7;
+}
+.ddsh-file-dots span:nth-child(3) {
+  opacity: 0.45;
+}
+.ddsh-file-location {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: var(--ddsh-file-text-soft);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.65px;
+  white-space: nowrap;
+}
+.ddsh-file-location strong {
+  color: var(--ddsh-file-text);
+  font-weight: 500;
+}
+.ddsh-file-folder {
+  color: var(--ddsh-file-accent);
+  font-size: 11px;
+}
+.ddsh-file-slash {
+  opacity: 0.35;
+}
+.ddsh-file-mode {
+  display: flex;
+  justify-content: flex-end;
+}
+.ddsh-file-moon {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--ddsh-file-line);
+  border-radius: 50%;
+  color: var(--ddsh-file-accent);
+  font-size: 13px;
+}
+.ddsh-file-path {
+  min-height: 31px;
+  padding: 0 21px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--ddsh-file-line-soft);
+  color: var(--ddsh-file-text-soft);
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+}
+.ddsh-file-path b {
+  opacity: 0.5;
+  font-weight: 600;
+}
+.ddsh-file-path-current {
+  color: var(--ddsh-file-text);
+}
+.ddsh-file-content {
+  padding: 36px 35px 33px;
+  position: relative;
+}
+.ddsh-file-heading {
+  width: calc(100% - 205px);
+  min-height: 178px;
+  position: relative;
+  z-index: 3;
+}
+.ddsh-file-smalltitle {
+  margin-bottom: 10px;
+  color: var(--ddsh-file-accent);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.ddsh-file-title {
+  color: var(--ddsh-file-title);
+  font-size: clamp(37px, 6.4vw, 56px);
+  font-weight: 300;
+  line-height: 0.86;
+  letter-spacing: -3.5px;
+  text-transform: lowercase;
+}
+.ddsh-file-meta {
+  margin-top: 19px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  color: var(--ddsh-file-text-soft);
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 1.15px;
+}
+.ddsh-file-meta span:first-child {
+  color: var(--ddsh-file-accent);
+}
+.ddsh-file-photo-wrap {
+  width: 190px;
+  position: absolute;
+  top: 25px;
+  right: 70px;
+  z-index: 7;
+  transform: rotate(3deg);
+}
+.ddsh-file-photo {
+  padding: 7px 7px 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #ececea;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.27);
+}
+.ddsh-file-photo-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.03),
+      rgba(0, 0, 0, 0.03)
+    ),
+    var(--ddsh-file-img);
+  background-size: cover;
+  background-position:
+    var(--ddsh-file-img-x)
+    var(--ddsh-file-img-y);
+  background-repeat: no-repeat;
+}
+.ddsh-file-photo-bottom {
+  min-height: 24px;
+  padding: 7px 2px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  color: #6f7274;
+  font-family: Arial, sans-serif;
+  font-size: 6px;
+  letter-spacing: 0.3px;
+}
+.ddsh-file-pin {
+  width: 33px;
+  position: absolute;
+  top: -17px;
+  left: 54%;
+  z-index: 10;
+  transform:
+    translateX(-50%)
+    rotate(-2deg);
+  pointer-events: none;
+}
+.ddsh-file-pin img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.ddsh-file-textbox {
+  width: 100%;
+  margin-top: 9px;
+  position: relative;
+  z-index: 4;
+  border: 1px solid var(--ddsh-file-line);
+  background: var(--ddsh-file-box);
+}
+.ddsh-file-text-top {
+  min-height: 35px;
+  padding: 0 17px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--ddsh-file-line-soft);
+  color: var(--ddsh-file-text-soft);
+  font-family: Arial, sans-serif;
+  font-size: 7px;
+  letter-spacing: 1px;
+}
+.ddsh-file-text {
+  padding: 28px 31px 26px;
+  color: var(--ddsh-file-text);
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.85;
+  text-align: justify;
+  overflow-wrap: anywhere;
+}
+.ddsh-file-sign {
+  padding: 0 19px 15px;
+  color: var(--ddsh-file-text-soft);
+  font-family: Arial, sans-serif;
+  font-size: 7px;
+  letter-spacing: 1px;
+  text-align: right;
+  text-transform: uppercase;
+}
+.ddsh-file-note {
+  width: 100%;
+  min-height: 50px;
+  margin: 17px 0 0;
+  position: relative;
+  z-index: 6;
+  border: 1px solid var(--ddsh-file-line);
+  background: var(--ddsh-file-box-soft);
+  box-shadow:
+    0 12px 22px rgba(0, 0, 0, 0.08);
+}
+.ddsh-file-note-content {
+  padding: 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.ddsh-file-note-content strong {
+  color: var(--ddsh-file-title);
+  font-size: 15px;
+  font-weight: 500;
+}
+.ddsh-file-note-content span {
+  color: var(--ddsh-file-text-soft);
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 1.65;
+  text-align: justify;
+  overflow-wrap: anywhere;
+}
+.ddsh-file-bottom {
+  min-height: 43px;
+  padding: 0 17px;
+  display: grid;
+  grid-template-columns: 80px 1fr 80px;
+  align-items: center;
+  border-top: 1px solid var(--ddsh-file-line);
+  background: var(--ddsh-file-toolbar);
+}
+.ddsh-file-bottom-left {
+  display: flex;
+  gap: 5px;
+}
+.ddsh-file-bottom-left span {
+  width: 13px;
+  height: 13px;
+  display: block;
+  border: 1px solid var(--ddsh-file-line);
+  background: var(--ddsh-file-box);
+}
+.ddsh-file-bottom-left span:nth-child(2) {
+  background: var(--ddsh-file-accent);
+}
+.ddsh-file-bottom-center {
+  color: var(--ddsh-file-text-soft);
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.ddsh-file-bottom-right {
+  color: var(--ddsh-file-accent);
+  font-size: 15px;
+  text-align: right;
+}
+@media (max-width: 620px) {
+  .ddsh-file-roll {
+    width: min(100% - 12px, 720px);
+    margin-top: 38px;
+    padding: 0 35px 25px 6px;
+  }
+  .ddsh-file-back-photo {
+    width: 90%;
+    height: calc(100% - 105px);
+    top: -24px;
+    right: 10px;
+    background-position:
+      var(--ddsh-file-back-x)
+      var(--ddsh-file-back-y);
+  }
+  .ddsh-file-toolbar {
+    min-height: 46px;
+    padding: 0 10px;
+    grid-template-columns: 45px 1fr 45px;
+  }
+  .ddsh-file-dots {
+    gap: 5px;
+  }
+  .ddsh-file-dots span {
+    width: 6px;
+    height: 6px;
+  }
+  .ddsh-file-location {
+    gap: 5px;
+    font-size: 8px;
+    letter-spacing: 0.4px;
+  }
+  .ddsh-file-location .ddsh-file-slash,
+  .ddsh-file-location strong {
+    display: none;
+  }
+  .ddsh-file-folder {
+    font-size: 9px;
+  }
+  .ddsh-file-moon {
+    width: 23px;
+    height: 23px;
+    font-size: 11px;
+  }
+  .ddsh-file-path {
+    min-height: 29px;
+    padding: 0 14px;
+    gap: 6px;
+    font-size: 7px;
+    letter-spacing: 0.4px;
+  }
+  .ddsh-file-content {
+    padding: 27px 20px 29px;
+  }
+  .ddsh-file-heading {
+    width: calc(100% - 125px);
+    min-height: 140px;
+  }
+  .ddsh-file-smalltitle {
+    margin-bottom: 8px;
+    font-size: 7.5px;
+    letter-spacing: 1.4px;
+  }
+  .ddsh-file-title {
+    font-size: clamp(29px, 9.5vw, 43px);
+    line-height: 0.86;
+    letter-spacing: -2.3px;
+  }
+  .ddsh-file-meta {
+    margin-top: 13px;
+    gap: 8px;
+    font-size: 6px;
+    letter-spacing: 0.8px;
+  }
+  .ddsh-file-photo-wrap {
+    width: 135px;
+    top: 23px;
+    right: 18px;
+    transform: rotate(3deg);
+  }
+  .ddsh-file-photo {
+    padding: 5px 5px 6px;
+  }
+  .ddsh-file-photo-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-position:
+      var(--ddsh-file-img-x)
+      var(--ddsh-file-img-y);
+  }
+  .ddsh-file-photo-bottom {
+    min-height: 18px;
+    padding: 5px 2px 0;
+    font-size: 4.5px;
+  }
+  .ddsh-file-pin {
+    width: 27px;
+    top: -15px;
+    left: 54%;
+  }
+  .ddsh-file-textbox {
+    margin-top: 10px;
+  }
+  .ddsh-file-text-top {
+    min-height: 32px;
+    padding: 0 14px;
+    font-size: 6px;
+    letter-spacing: 0.8px;
+  }
+  .ddsh-file-text {
+    padding: 22px 20px 21px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  .ddsh-file-sign {
+    padding: 0 15px 13px;
+    font-size: 6px;
+    letter-spacing: 0.8px;
+  }
+  .ddsh-file-note {
+    width: 100%;
+    min-height: 46px;
+    margin-top: 14px;
+  }
+  .ddsh-file-note-content {
+    padding: 13px 14px;
+  }
+  .ddsh-file-note-content strong {
+    font-size: 13px;
+  }
+  .ddsh-file-note-content span {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+  .ddsh-file-bottom {
+    min-height: 39px;
+    padding: 0 13px;
+    grid-template-columns: 60px 1fr 60px;
+  }
+  .ddsh-file-bottom-left {
+    gap: 4px;
+  }
+  .ddsh-file-bottom-left span {
+    width: 11px;
+    height: 11px;
+  }
+  .ddsh-file-bottom-center {
+    font-size: 6px;
+    letter-spacing: 0.7px;
+  }
+  .ddsh-file-bottom-right {
+    font-size: 13px;
+  }
+  .ddshopfz-creditld1 {
+    min-height: 16px;
+    margin: -5px auto;
+    padding: 3px 0 0;
+  }
+}
+.ddshopfz-creditld1 {
+  width: 100%;
+  min-height: 18px;
+  margin: -5px auto;
+  padding: 4px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+  background: transparent;
+  font-family: Arial, sans-serif;
+}
+.ddshopfz-creditld1 span {
+  width: 11px;
+  height: 10px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--ddsh-lldon01);
+  font-size: 7px;
+  font-weight: 400;
+  line-height: 10px;
+  letter-spacing: 0.7px;
+  text-align: left;
+  cursor: help;
+  user-select: none;
+  -webkit-user-select: none;
+  transition:
+    width 0.35s ease,
+    color 0.25s ease;
+}
+.ddshopfz-creditld1 span::before {
+  content: "✦ deepdeepsleepfranklin";
+  display: block;
+}
+.ddshopfz-creditld1 span:hover {
+  width: 110px;
+  color: var(--ddsh-lldon01);
+}
