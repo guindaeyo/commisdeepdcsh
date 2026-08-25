@@ -519,6 +519,7 @@
     padding: 3px 0 0;
   }
 }
+
 .ddshopfz-creditld1 {
   width: 100%;
   min-height: 18px;
@@ -544,6 +545,7 @@
   line-height: 10px;
   letter-spacing: 0.7px;
   text-align: left;
+  font-style: italic;
   cursor: help;
   user-select: none;
   -webkit-user-select: none;
