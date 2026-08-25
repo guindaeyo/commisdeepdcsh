@@ -1,0 +1,238 @@
+.ddsh-moonsong {
+  width: min(700px, calc(100% - 24px));
+  margin: 30px auto 0;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: "Bai Jamjuree", sans-serif;
+  color: var(--ddsh-ms-text, #f7f5ff);
+  background-image: var(--ddsh-ms-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.ddsh-moonsong *,
+.ddsh-moonsong *::before,
+.ddsh-moonsong *::after {
+  box-sizing: border-box;
+}
+.ddsh-ms-inner {
+  width: calc(100% - 48px);
+  margin: 24px auto;
+  padding: 32px 22px 26px;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.88);
+  background: transparent;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.ddsh-ms-symbol {
+  width: 100%;
+  margin: 0 auto 23px;
+  color: var(--ddsh-ms-accent, #ffffff);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 79px;
+  font-weight: 400;
+  line-height: 0.9;
+  text-align: center;
+}
+.ddsh-ms-photo {
+  width: calc(100% - 20px);
+  aspect-ratio: 2.2 / 1;
+  margin: 0 auto 27px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  background-image: var(--ddsh-ms-photo);
+  background-size: cover;
+  background-position: var(--ddsh-ms-photo-x, 50%) var(--ddsh-ms-photo-y, 50%);
+  background-repeat: no-repeat;
+}
+.ddsh-ms-line {
+  width: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(255, 255, 255, 0.92);
+}
+.ddsh-ms-line-top {
+  height: 38px;
+  margin-bottom: 25px;
+}
+.ddsh-ms-line-short {
+  height: 36px;
+  margin-top: 23px;
+  margin-bottom: 22px;
+}
+.ddsh-ms-line-bottom {
+  height: 56px;
+  margin-top: 28px;
+  margin-bottom: 24px;
+}
+.ddsh-ms-quote {
+  width: 94%;
+  margin: 0 auto;
+  color: var(--ddsh-ms-accent, #ffffff);
+  font-family: "Bodoni Moda", "Times New Roman", serif;
+  font-size: clamp(25px, 4.5vw, 34px);
+  font-weight: 500;
+  line-height: 0.86;
+  letter-spacing: -1.3px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.08), 0 2px 7px rgba(0, 0, 0, 0.14);
+}
+.ddsh-ms-roleplay {
+  width: 100%;
+  margin: 0 auto;
+  color: var(--ddsh-ms-text, #f7f5ff);
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 16px;
+  font-weight: 415;
+  line-height: 1.7;
+  text-align: justify;
+  text-justify: inter-word;
+  overflow-wrap: break-word;
+}
+.ddsh-ms-roleplay p {
+  margin: 0 0 15px;
+}
+.ddsh-ms-roleplay p:last-child {
+  margin-bottom: 0;
+}
+.ddsh-ms-note {
+  width: calc(100% - 20px);
+  margin: 0 auto;
+  padding: 13px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.82);
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 16px;
+  font-weight: 415;
+  line-height: 1.6;
+  text-align: left;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.ddsh-ms-note strong {
+  margin-right: 4px;
+  color: #ffffff;
+  font-weight: 550;
+}
+.ddshopfz-creditjw01 {
+  width: min(700px, calc(100% - 24px));
+  min-height: 18px;
+  margin: -5px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+  background: transparent;
+  font-family: Arial, sans-serif;
+}
+.ddshopfz-creditjw01 span {
+  width: 11px;
+  height: 10px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #999999;
+  font-size: 7px;
+  font-weight: 400;
+  line-height: 10px;
+  letter-spacing: 0.7px;
+  text-align: left;
+  font-style: italic;
+  cursor: help;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: width 0.35s ease, color 0.25s ease;
+}
+.ddshopfz-creditjw01 span::before {
+  content: "✦ deepdeepsleepfranklin";
+  display: block;
+}
+.ddshopfz-creditjw01 span:hover {
+  width: 110px;
+  color: #999999;
+}
+@media (max-width: 600px) {
+  .ddsh-moonsong {
+    width: min(700px, calc(100% - 14px));
+    margin: 15px auto 0;
+  }
+  .ddsh-ms-inner {
+    width: calc(100% - 22px);
+    margin: 11px auto;
+    padding: 24px 15px 20px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .ddsh-ms-symbol {
+    margin: 0 auto 18px;
+    font-size: 58px;
+    line-height: 0.9;
+  }
+  .ddsh-ms-photo {
+    width: 100%;
+    margin: 0 auto 21px;
+    aspect-ratio: 2.2 / 1;
+  }
+  .ddsh-ms-line-top {
+    height: 30px;
+    margin-bottom: 19px;
+  }
+  .ddsh-ms-quote {
+    width: 100%;
+    font-size: clamp(21px, 6.7vw, 28px);
+    line-height: 0.88;
+    letter-spacing: -0.8px;
+  }
+  .ddsh-ms-line-short {
+    height: 30px;
+    margin-top: 19px;
+    margin-bottom: 19px;
+  }
+  .ddsh-ms-roleplay {
+    width: 100%;
+    font-size: 15px;
+    font-weight: 415;
+    line-height: 1.7;
+  }
+  .ddsh-ms-roleplay p {
+    margin: 0 0 13px;
+  }
+  .ddsh-ms-line-bottom {
+    height: 42px;
+    margin-top: 22px;
+    margin-bottom: 20px;
+  }
+  .ddsh-ms-note {
+    width: 100%;
+    padding: 11px 13px;
+    font-size: 14px;
+    font-weight: 415;
+    line-height: 1.6;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+  .ddsh-ms-note strong {
+    margin-right: 3px;
+    font-weight: 550;
+  }
+  .ddshopfz-creditjw01 {
+    width: min(700px, calc(100% - 14px));
+    min-height: 16px;
+    margin: -5px auto;
+  }
+  .ddshopfz-creditjw01 span {
+    width: 11px;
+    height: 9px;
+    font-size: 6.5px;
+    line-height: 9px;
+  }
+  .ddshopfz-creditjw01 span:hover {
+    width: 105px;
+  }
+}
