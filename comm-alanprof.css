@@ -347,19 +347,26 @@
   transform: rotate(-6deg);
 }
 
-.ddsh-commitalan-ref-cassette {
+.ddsh-commitalan-ref-cassette,
+.ddsh-commitalan-ref-cassette:link,
+.ddsh-commitalan-ref-cassette:visited,
+.ddsh-commitalan-ref-cassette:active {
   width: 45%;
+  display: block;
   position: absolute;
   top: 78%;
   left: 3.5%;
   z-index: 70;
-  cursor: grab;
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none !important;
   transform: rotate(-7deg);
   transform-origin: center;
   filter: drop-shadow(0 1.35cqw 1.55cqw var(--lwa-shadow));
   transition:
     transform .36s cubic-bezier(.2,.7,.2,1),
     filter .3s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .ddsh-commitalan-ref-cassette img {
@@ -373,10 +380,10 @@
 .ddsh-commitalan-ref-cassette:hover {
   transform: translate(-.55cqw, -.62cqw) rotate(-3deg) scale(1.03);
   filter: drop-shadow(0 1.65cqw 1.85cqw var(--lwa-shadow));
+  text-decoration: none !important;
 }
 
 .ddsh-commitalan-ref-cassette:active {
-  cursor: grabbing;
   transform: translate(-.2cqw, -.2cqw) rotate(-5deg) scale(1.015);
 }
 
@@ -569,7 +576,10 @@
     left: 34%;
   }
 
-  .ddsh-commitalan-ref-cassette {
+  .ddsh-commitalan-ref-cassette,
+  .ddsh-commitalan-ref-cassette:link,
+  .ddsh-commitalan-ref-cassette:visited,
+  .ddsh-commitalan-ref-cassette:active {
     width: 50%;
   }
 
