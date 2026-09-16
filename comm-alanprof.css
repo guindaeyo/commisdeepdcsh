@@ -249,12 +249,12 @@
 
 .ddsh-commitalan-ref-title {
   position: absolute;
-  top: 38%;
-  left: 5%;
+  top: 37.5%;
+  left: 6%;
   z-index: 55;
   color: var(--lwa-pink);
   font-family: "Wallet Chalk", "Rock Salt", cursive;
-  font-size: 10.9cqw;
+  font-size: 9cqw;
   font-weight: 400;
   line-height: .81;
   letter-spacing: -.07em;
@@ -297,7 +297,7 @@
 }
 
 .ddsh-commitalan-ref-note2 {
-  top: 38.8%;
+  top: 38%;
   right: 7.8%;
   left: auto;
   text-align: right;
