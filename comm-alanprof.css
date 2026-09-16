@@ -212,12 +212,10 @@
   z-index: 21;
   pointer-events: none;
   opacity: .42;
-  background:
-    linear-gradient(173deg, transparent 0 3.1%, rgba(255,255,255,.26) 3.14%, transparent 3.28%, transparent 100%),
-    linear-gradient(103deg, transparent 0 76.4%, rgba(255,255,255,.15) 76.5%, transparent 76.68%, transparent 100%),
-    linear-gradient(8deg, transparent 0 87.2%, rgba(255,255,255,.14) 87.32%, transparent 87.48%, transparent 100%),
-    linear-gradient(96deg, transparent 0 2.85%, rgba(255,255,255,.13) 2.95%, transparent 3.12%, transparent 100%),
-    linear-gradient(151deg, transparent 0 67.8%, rgba(255,255,255,.11) 67.94%, transparent 68.1%, transparent 100%);
+  background-image: url("https://iili.io/nnRA2m7.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   mix-blend-mode: screen;
 }
 
