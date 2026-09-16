@@ -1,0 +1,665 @@
+@font-face {
+  font-family: "Wallet Chalk";
+  src: local("Wallet Chalk"), local("WalletChalk");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.ddsh-commitalan-ref {
+  width: min(1024px, 100%);
+  aspect-ratio: 1024 / 1453;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 11.8%;
+  position: relative;
+  overflow: hidden;
+  background: var(--lwa-bg);
+  font-family: "DM Sans", "Bai Jamjuree", sans-serif;
+  box-sizing: border-box;
+  container-type: inline-size;
+  isolation: isolate;
+}
+
+.ddsh-commitalan-ref *,
+.ddsh-commitalan-ref *::before,
+.ddsh-commitalan-ref *::after {
+  box-sizing: border-box;
+}
+
+.ddsh-commitalan-ref-main {
+  min-width: 0;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: var(--lwa-bg);
+}
+
+.ddsh-commitalan-ref-main::before {
+  content: "";
+  width: 120%;
+  height: 20%;
+  position: absolute;
+  top: -15.5%;
+  left: -5%;
+  z-index: 24;
+  pointer-events: none;
+  background-color: var(--lwa-top-paper-color, #e8e0d2);
+  background-image: url("https://iili.io/nn6D09p.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% 100%;
+  background-blend-mode: multiply;
+  -webkit-mask-image: url("https://iili.io/nn6D09p.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center top;
+  -webkit-mask-size: 100% 100%;
+  mask-image: url("https://iili.io/nn6D09p.png");
+  mask-repeat: no-repeat;
+  mask-position: center top;
+  mask-size: 100% 100%;
+  filter: drop-shadow(0 .12cqw .22cqw rgba(0,0,0,.16));
+}
+
+.ddsh-commitalan-ref-main::after {
+  content: none;
+}
+
+.ddsh-commitalan-ref-photo {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  background: #1c1c1c;
+  border-bottom: 1px solid var(--lwa-line);
+}
+
+.ddsh-commitalan-ref-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+  filter: grayscale(1) contrast(1.15) brightness(.66);
+}
+
+.ddsh-commitalan-ref-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.16)),
+    radial-gradient(circle at center, transparent 42%, rgba(0,0,0,.17) 100%);
+}
+
+.ddsh-commitalan-ref-photo1 {
+  top: 0;
+  height: 21.8%;
+}
+
+.ddsh-commitalan-ref-photo2 {
+  top: 21.8%;
+  height: 22.4%;
+}
+
+.ddsh-commitalan-ref-photo2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background-image: url("https://iili.io/nnR1mwx.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: .32;
+  mix-blend-mode: screen;
+}
+
+.ddsh-commitalan-ref-photo3 {
+  top: 44.2%;
+  height: 22.2%;
+}
+
+.ddsh-commitalan-ref-photo3::before {
+  content: "";
+  width: 20%;
+  height: 110%;
+  position: absolute;
+  top: -5%;
+  left: -6.65cqw;
+  z-index: 4;
+  pointer-events: none;
+  background-color: var(--lwa-left-paper-color, #e8e0d2);
+  background-image: url("https://iili.io/nn6DcSR.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 100% 100%;
+  background-blend-mode: multiply;
+  -webkit-mask-image: url("https://iili.io/nn6DcSR.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: left center;
+  -webkit-mask-size: 100% 100%;
+  mask-image: url("https://iili.io/nn6DcSR.png");
+  mask-repeat: no-repeat;
+  mask-position: left center;
+  mask-size: 100% 100%;
+  filter: drop-shadow(.12cqw 0 .22cqw rgba(0,0,0,.16));
+}
+
+.ddsh-commitalan-ref-photo4 {
+  top: 66.4%;
+  height: 33.6%;
+}
+
+.ddsh-commitalan-ref-grain {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: var(--lwa-grain-opacity, .25);
+  mix-blend-mode: soft-light;
+  background-image: var(--lwa-grain);
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: var(--lwa-grain-size, 36cqw) auto;
+  filter: grayscale(1) contrast(1.4) brightness(1.08);
+}
+
+.ddsh-commitalan-ref-grain::before {
+  content: "";
+  position: absolute;
+  inset: -4%;
+  pointer-events: none;
+  background-image: var(--lwa-grain);
+  background-repeat: repeat;
+  background-position: 37% 61%;
+  background-size: var(--lwa-grain-fine-size, 18cqw) auto;
+  opacity: var(--lwa-grain-fine-opacity, .42);
+  mix-blend-mode: screen;
+  filter: grayscale(1) contrast(1.65) brightness(.9);
+  transform: rotate(.15deg);
+}
+
+.ddsh-commitalan-ref-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .18;
+  background:
+    radial-gradient(circle at 17% 23%, rgba(255,255,255,.32) 0 .06cqw, transparent .1cqw),
+    radial-gradient(circle at 63% 14%, rgba(255,255,255,.22) 0 .05cqw, transparent .09cqw),
+    radial-gradient(circle at 41% 72%, rgba(0,0,0,.28) 0 .05cqw, transparent .09cqw),
+    radial-gradient(circle at 84% 57%, rgba(255,255,255,.20) 0 .05cqw, transparent .09cqw),
+    radial-gradient(circle at 28% 88%, rgba(0,0,0,.23) 0 .045cqw, transparent .085cqw);
+  background-size:
+    4.3cqw 4.3cqw,
+    5.1cqw 5.1cqw,
+    4.7cqw 4.7cqw,
+    5.6cqw 5.6cqw,
+    4.1cqw 4.1cqw;
+  mix-blend-mode: screen;
+}
+
+.ddsh-commitalan-ref-scratch {
+  position: absolute;
+  inset: 0;
+  z-index: 21;
+  pointer-events: none;
+  opacity: .42;
+  background:
+    linear-gradient(173deg, transparent 0 3.1%, rgba(255,255,255,.26) 3.14%, transparent 3.28%, transparent 100%),
+    linear-gradient(103deg, transparent 0 76.4%, rgba(255,255,255,.15) 76.5%, transparent 76.68%, transparent 100%),
+    linear-gradient(8deg, transparent 0 87.2%, rgba(255,255,255,.14) 87.32%, transparent 87.48%, transparent 100%),
+    linear-gradient(96deg, transparent 0 2.85%, rgba(255,255,255,.13) 2.95%, transparent 3.12%, transparent 100%),
+    linear-gradient(151deg, transparent 0 67.8%, rgba(255,255,255,.11) 67.94%, transparent 68.1%, transparent 100%);
+  mix-blend-mode: screen;
+}
+
+.ddsh-commitalan-ref-top {
+  position: absolute;
+  top: 4.35%;
+  left: 7.15%;
+  z-index: 50;
+  color: var(--lwa-white);
+  line-height: 1;
+}
+
+.ddsh-commitalan-ref-top-main {
+  font-size: 2.12cqw;
+  font-weight: 700;
+  letter-spacing: -.045em;
+  transform: translateY(2.8cqw) rotate(-8deg);
+  transform-origin: left center;
+}
+
+.ddsh-commitalan-ref-top-script {
+  margin: .55em 0 0 1.6em;
+  font-family: "Wallet Chalk", "Rock Salt", cursive;
+  font-size: 1.55cqw;
+  line-height: 1;
+  transform: translateX(-2cqw) rotate(-8deg);
+  white-space: nowrap;
+}
+
+.ddsh-commitalan-ref-title {
+  position: absolute;
+  top: 38%;
+  left: 5%;
+  z-index: 55;
+  color: var(--lwa-pink);
+  font-family: "Wallet Chalk", "Rock Salt", cursive;
+  font-size: 10.9cqw;
+  font-weight: 400;
+  line-height: .81;
+  letter-spacing: -.07em;
+  text-transform: uppercase;
+  transform: rotate(-2deg);
+  pointer-events: none;
+}
+
+.ddsh-commitalan-ref-title span {
+  display: block;
+  white-space: nowrap;
+}
+
+.ddsh-commitalan-ref-title span:nth-child(2) {
+  margin-left: 4.8%;
+}
+
+.ddsh-commitalan-ref-note {
+  position: absolute;
+  z-index: 56;
+  color: var(--lwa-small);
+  font-size: .93cqw;
+  font-weight: 500;
+  line-height: 1.24;
+  letter-spacing: .01em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color .22s ease;
+}
+
+.ddsh-commitalan-ref-note:hover {
+  color: var(--lwa-small-hover);
+}
+
+.ddsh-commitalan-ref-note1 {
+  top: 8.3%;
+  left: 85.5%;
+  right: auto;
+  text-align: left;
+}
+
+.ddsh-commitalan-ref-note2 {
+  top: 38.8%;
+  right: 7.8%;
+  left: auto;
+  text-align: right;
+}
+
+.ddsh-commitalan-ref-note3 {
+  top: 59%;
+  left: 7%;
+  right: auto;
+  text-align: left;
+}
+
+.ddsh-commitalan-ref-note4 {
+  top: 80.8%;
+  right: 6.65%;
+  left: auto;
+  text-align: right;
+}
+
+.ddsh-commitalan-ref-note5 {
+  top: 95.5%;
+  left: 41%;
+  right: auto;
+  text-align: center;
+}
+
+.ddsh-commitalan-ref-star {
+  position: absolute;
+  z-index: 57;
+  color: var(--lwa-white);
+  line-height: 1;
+}
+
+.ddsh-commitalan-ref-star1 {
+  top: 7.9%;
+  right: 3.95%;
+  font-size: 3.15cqw;
+  transform: rotate(5deg);
+}
+
+.ddsh-commitalan-ref-star2 {
+  top: 67.7%;
+  right: 4.3%;
+  font-size: 3.7cqw;
+  transform: rotate(-6deg);
+}
+
+.ddsh-commitalan-ref-cassette {
+  width: 45%;
+  position: absolute;
+  top: 78%;
+  left: 3.5%;
+  z-index: 70;
+  cursor: grab;
+  transform: rotate(-7deg);
+  transform-origin: center;
+  filter: drop-shadow(0 1.35cqw 1.55cqw var(--lwa-shadow));
+  transition:
+    transform .36s cubic-bezier(.2,.7,.2,1),
+    filter .3s ease;
+}
+
+.ddsh-commitalan-ref-cassette::before,
+.ddsh-commitalan-ref-cassette::after {
+  content: "";
+  position: absolute;
+  background: rgba(230,224,210,.72);
+  border: 1px solid rgba(255,255,255,.28);
+  box-shadow: 0 .12cqw .3cqw rgba(0,0,0,.12);
+  pointer-events: none;
+}
+
+.ddsh-commitalan-ref-cassette::before {
+  width: 13%;
+  height: 4.4%;
+  top: 12%;
+  left: 3.4%;
+  transform: rotate(-28deg);
+}
+
+.ddsh-commitalan-ref-cassette::after {
+  width: 10.8%;
+  height: 4.2%;
+  bottom: 12%;
+  right: 5%;
+  transform: rotate(-38deg);
+  opacity: .38;
+}
+
+.ddsh-commitalan-ref-cassette img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.ddsh-commitalan-ref-cassette:hover {
+  transform: translate(-.55cqw, -.62cqw) rotate(-3deg) scale(1.03);
+  filter: drop-shadow(0 1.65cqw 1.85cqw var(--lwa-shadow));
+}
+
+.ddsh-commitalan-ref-cassette:active {
+  cursor: grabbing;
+  transform: translate(-.2cqw, -.2cqw) rotate(-5deg) scale(1.015);
+}
+
+.ddsh-commitalan-ref-arrow {
+  position: absolute;
+  left: 47%;
+  top: 92.8%;
+  z-index: 58;
+  color: var(--lwa-white);
+  font-family: "Wallet Chalk", "Rock Salt", cursive;
+  font-size: 1.55cqw;
+  line-height: 1;
+  transform: rotate(4deg);
+}
+
+.ddsh-commitalan-ref-rip {
+  width: 108%;
+  height: 25%;
+  position: absolute;
+  left: -3%;
+  bottom: -16.8%;
+  z-index: 40;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      var(--lwa-rip-top) 0%,
+      var(--lwa-rip-bottom) 100%
+    ),
+    url("https://iili.io/nnPi8hu.png");
+  background-repeat:
+    no-repeat,
+    no-repeat;
+  background-position:
+    center bottom,
+    center bottom;
+  background-size:
+    100% 100%,
+    100% 100%;
+  background-blend-mode: multiply;
+  -webkit-mask-image: url("https://iili.io/nnPi8hu.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center bottom;
+  -webkit-mask-size: 100% 100%;
+  mask-image: url("https://iili.io/nnPi8hu.png");
+  mask-repeat: no-repeat;
+  mask-position: center bottom;
+  mask-size: 100% 100%;
+  filter: drop-shadow(0 -.15cqw .25cqw rgba(0,0,0,.16));
+}
+
+.ddsh-commitalan-ref-rip::before {
+  content: none;
+}
+
+.ddsh-commitalan-ref-side {
+  min-width: 0;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  color: var(--lwa-papertext);
+  background:
+    radial-gradient(circle at 26% 18%, rgba(72,66,58,.06) 0 .06cqw, transparent .09cqw),
+    radial-gradient(circle at 68% 68%, rgba(255,255,255,.09) 0 .07cqw, transparent .1cqw),
+    linear-gradient(
+      180deg,
+      var(--lwa-paper) 0%,
+      var(--lwa-paper2) 100%
+    );
+  background-size:
+    .55cqw .55cqw,
+    .8cqw .8cqw,
+    auto;
+  border-left: 1px solid rgba(34,30,26,.18);
+}
+
+.ddsh-commitalan-ref-side::before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: 14%;
+  top: 0;
+  background: rgba(56,50,43,.20);
+}
+
+.ddsh-commitalan-ref-side::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .22;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(44,40,35,.03) 0,
+      rgba(44,40,35,.03) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+}
+
+.ddsh-commitalan-ref-side-script {
+  position: absolute;
+  top: 18%;
+  left: 23%;
+  z-index: 5;
+  font-family: "Wallet Chalk", "Rock Salt", cursive;
+  font-size: 2.42cqw;
+  line-height: 1;
+  white-space: nowrap;
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: left top;
+}
+
+.ddsh-commitalan-ref-side-copy {
+  width: 362%;
+  position: absolute;
+  top: 60%;
+  left: 5%;
+  z-index: 5;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1cqw;
+  line-height: 1.34;
+  text-align: justify;
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: left top;
+}
+
+.ddsh-commitalan-ref-side-bottom {
+  position: absolute;
+  right: 55%;
+  bottom: 18%;
+  z-index: 5;
+  font-size: 3.3cqw;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -.075em;
+  white-space: nowrap;
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: right bottom;
+}
+
+@media (max-width: 700px) {
+  .ddsh-commitalan-ref {
+    grid-template-columns: minmax(0, 1fr) 12.6%;
+  }
+
+  .ddsh-commitalan-ref-photo3::before {
+    left: -6.65cqw;
+  }
+
+  .ddsh-commitalan-ref-top-main {
+    font-size: 10px;
+  }
+
+  .ddsh-commitalan-ref-top-script {
+    font-size: 8px;
+  }
+
+  .ddsh-commitalan-ref-title {
+    font-size: 11.45cqw;
+  }
+
+  .ddsh-commitalan-ref-note {
+    font-size: 7px;
+    line-height: 1.2;
+  }
+
+  .ddsh-commitalan-ref-note1 {
+    left: 70%;
+  }
+
+  .ddsh-commitalan-ref-note2 {
+    right: 5%;
+  }
+
+  .ddsh-commitalan-ref-note3 {
+    left: 5%;
+  }
+
+  .ddsh-commitalan-ref-note4 {
+    right: 5%;
+  }
+
+  .ddsh-commitalan-ref-note5 {
+    left: 34%;
+  }
+
+  .ddsh-commitalan-ref-cassette {
+    width: 50%;
+  }
+
+  .ddsh-commitalan-ref-side-script {
+    font-size: 9px;
+  }
+
+  .ddsh-commitalan-ref-side-copy {
+    width: 336%;
+    font-size: 7px;
+    line-height: 1.25;
+  }
+
+  .ddsh-commitalan-ref-side-bottom {
+    font-size: 12px;
+  }
+}
+
+.ddshopfz-ccm01 {
+  width: min(600px, calc(100% - 24px));
+  min-height: 18px;
+  margin: -30px auto 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+  background: transparent;
+  font-family: Arial, sans-serif;
+}
+
+.ddshopfz-ccm01 span {
+  width: 11px;
+  height: 10px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #999999;
+  font-size: 7px;
+  font-weight: 400;
+  line-height: 10px;
+  letter-spacing: 0.7px;
+  text-align: left;
+  font-style: italic;
+  cursor: help;
+  user-select: none;
+  -webkit-user-select: none;
+  transition:
+    width 0.35s ease,
+    color 0.25s ease;
+}
+
+.ddshopfz-ccm01 span::before {
+  content: "✦ deepdeepsleepfranklin";
+  display: block;
+}
+
+.ddshopfz-ccm01 span:hover {
+  width: 110px;
+  color: #999999;
+}
+
+@media (max-width: 700px) {
+  .ddshopfz-ccm01 {
+    margin: -30px auto 0;
+  }
+
+  .ddshopfz-ccm01 span {
+    width: 110px;
+  }
+}
