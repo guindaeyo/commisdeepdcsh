@@ -272,21 +272,25 @@
   margin-left: 4.8%;
 }
 
-.ddsh-commitalan-ref-note {
+.ddsh-commitalan-ref-note,
+.ddsh-commitalan-ref-note:link,
+.ddsh-commitalan-ref-note:visited,
+.ddsh-commitalan-ref-note:active {
   position: absolute;
   z-index: 56;
-  color: var(--lwa-small);
+  color: var(--lwa-small) !important;
   font-size: .93cqw;
   font-weight: 500;
   line-height: 1.24;
   letter-spacing: .01em;
   text-transform: uppercase;
-  text-decoration: none;
+  text-decoration: none !important;
   transition: color .22s ease;
 }
 
 .ddsh-commitalan-ref-note:hover {
-  color: var(--lwa-small-hover);
+  color: var(--lwa-small-hover) !important;
+  text-decoration: none !important;
 }
 
 .ddsh-commitalan-ref-note1 {
@@ -566,7 +570,10 @@
     font-size: 11.45cqw;
   }
 
-  .ddsh-commitalan-ref-note {
+  .ddsh-commitalan-ref-note,
+  .ddsh-commitalan-ref-note:link,
+  .ddsh-commitalan-ref-note:visited,
+  .ddsh-commitalan-ref-note:active {
     font-size: 7px;
     line-height: 1.2;
   }
