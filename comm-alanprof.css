@@ -364,33 +364,6 @@
     filter .3s ease;
 }
 
-.ddsh-commitalan-ref-cassette::before,
-.ddsh-commitalan-ref-cassette::after {
-  content: "";
-  position: absolute;
-  background: rgba(230,224,210,.72);
-  border: 1px solid rgba(255,255,255,.28);
-  box-shadow: 0 .12cqw .3cqw rgba(0,0,0,.12);
-  pointer-events: none;
-}
-
-.ddsh-commitalan-ref-cassette::before {
-  width: 13%;
-  height: 4.4%;
-  top: 12%;
-  left: 3.4%;
-  transform: rotate(-28deg);
-}
-
-.ddsh-commitalan-ref-cassette::after {
-  width: 10.8%;
-  height: 4.2%;
-  bottom: 12%;
-  right: 5%;
-  transform: rotate(-38deg);
-  opacity: .38;
-}
-
 .ddsh-commitalan-ref-cassette img {
   width: 100%;
   height: auto;
