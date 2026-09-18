@@ -189,7 +189,6 @@
   font-size: clamp(6px, 1.4vw, 18px);
   font-weight: 700;
   white-space: nowrap;
-  text-overflow: clip;
 }
 
 .ddsh-commtmklpfo-barcode {
@@ -299,7 +298,6 @@
 .ddsh-commtmklpfo-photo {
   width: 100%;
   height: 100%;
-  aspect-ratio: 1 / 1;
   position: relative;
   overflow: hidden;
   background-color: #d9d9d9;
@@ -585,7 +583,7 @@
 }
 
 .ddsh-commtmklpfo-redstamp {
-  width: calc(100% - 10%);
+  width: 90%;
   margin: auto 5%;
   padding: 4% 3%;
   position: relative;
@@ -955,7 +953,7 @@
 }
 
 .ddsh-commtmklpfo-relations strong {
-  margin-top: 5px;
+  margin-top: 3px;
   font-size: 16px;
   font-weight: 600;
 }
@@ -1058,6 +1056,7 @@
   gap: 16px;
   color: var(--ddsh-commtmklpfo-ink) !important;
   background: transparent !important;
+  background-color: transparent !important;
   border-top: 2px solid var(--ddsh-commtmklpfo-ink);
   box-shadow: none !important;
 }
@@ -1065,6 +1064,7 @@
 .ddsh-commtmklpfo-footer > div {
   color: inherit;
   background: transparent !important;
+  background-color: transparent !important;
 }
 
 .ddsh-commtmklpfo-footer span {
@@ -1099,6 +1099,7 @@
   padding: 6px 10px;
   color: var(--ddsh-commtmklpfo-ink) !important;
   background: transparent !important;
+  background-color: transparent !important;
   border: 2px solid var(--ddsh-commtmklpfo-line);
   font-family: Arial, sans-serif;
   font-size: 8px;
@@ -1193,7 +1194,110 @@
     width: 100%;
     max-width: 100%;
     aspect-ratio: 1280 / 430;
-    grid-template-columns: 33.59375% 46.484375% 19.921875%;
+    grid-template-columns: 33.59375% 51.40625% 15%;
+  }
+
+  .ddsh-commtmklpfo-identification {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .ddsh-commtmklpfo-info {
+    width: 100%;
+    min-width: 0;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ddsh-commtmklpfo-row {
+    min-width: 0;
+    padding: 1.5% 2.5%;
+  }
+
+  .ddsh-commtmklpfo-label {
+    font-size: 4px;
+    letter-spacing: .2px;
+  }
+
+  .ddsh-commtmklpfo-value {
+    width: 100%;
+    min-width: 0;
+    margin-top: 2px;
+    overflow: visible;
+    font-size: 6px;
+    line-height: 1.05;
+    white-space: nowrap;
+    text-overflow: clip;
+  }
+
+  .ddsh-commtmklpfo-name {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+
+  .ddsh-commtmklpfo-name > span {
+    font-size: 4px;
+  }
+
+  .ddsh-commtmklpfo-name > strong {
+    font-size: 10px;
+  }
+
+  .ddsh-commtmklpfo-name > small {
+    font-size: 3px;
+  }
+
+  .ddsh-commtmklpfo-blocktitle {
+    font-size: 4px;
+  }
+
+  .ddsh-commtmklpfo-subject-note {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+
+  .ddsh-commtmklpfo-subject-note-head span {
+    font-size: 4px;
+  }
+
+  .ddsh-commtmklpfo-subject-note-head b {
+    font-size: 3px;
+  }
+
+  .ddsh-commtmklpfo-subject-note p {
+    font-size: 6px;
+  }
+
+  .ddsh-commtmklpfo-sidebox {
+    padding: 4px;
+  }
+
+  .ddsh-commtmklpfo-sidebox > span {
+    font-size: 3px;
+    letter-spacing: .15px;
+  }
+
+  .ddsh-commtmklpfo-sidebox > strong {
+    margin: 2px 0;
+    font-size: 6px;
+  }
+
+  .ddsh-commtmklpfo-sidebox > small {
+    font-size: 3px;
+  }
+
+  .ddsh-commtmklpfo-redstamp {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 4% 2%;
+  }
+
+  .ddsh-commtmklpfo-redstamp strong {
+    font-size: 10px;
+  }
+
+  .ddsh-commtmklpfo-redstamp span {
+    font-size: 3px;
   }
 
   .ddsh-commtmklpfo-photo-caption {
