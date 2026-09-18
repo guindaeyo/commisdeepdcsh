@@ -371,7 +371,7 @@
 .ddsh-commtmklpfo-name > strong {
   display: block;
   margin-top: 5px;
-  font-size: clamp(22px, 2.7vw, 39px);
+  font-size: clamp(22px, 2.7vw, 25px);
   font-weight: 700;
   line-height: 1.2;
 }
@@ -854,7 +854,7 @@
 }
 
 .ddsh-commtmklpfo-relations strong {
-  margin-top: 5px;
+  margin-top: px;
   font-size: clamp(12px, 1.25vw, 16px);
   font-weight: 600;
 }
