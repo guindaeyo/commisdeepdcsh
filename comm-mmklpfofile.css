@@ -289,7 +289,6 @@
   height: 100%;
   min-width: 0;
   min-height: 0;
-  position: relative;
   overflow: hidden;
   border-right: 1px solid var(--ddsh-commtmklpfo-line);
   border-bottom: 1px solid var(--ddsh-commtmklpfo-line);
@@ -394,7 +393,7 @@
   overflow: hidden;
   border-bottom: 1px solid var(--ddsh-commtmklpfo-line);
   font-family: Arial, sans-serif;
-  font-size: clamp(3px, .55vw, 7px);
+  font-size: clamp(3px, .55vw, 10px);
   font-weight: 800;
   letter-spacing: .4px;
   white-space: nowrap;
@@ -419,7 +418,7 @@
   display: block;
   margin: 0;
   font-family: Arial, sans-serif;
-  font-size: clamp(3px, .55vw, 7px);
+  font-size: clamp(3px, .55vw, 10px);
   font-weight: 800;
   line-height: 1;
   letter-spacing: .4px;
@@ -428,7 +427,7 @@
 .ddsh-commtmklpfo-name > strong {
   display: block;
   margin-top: 1.5%;
-  font-size: clamp(8px, 1.65vw, 21px);
+  font-size: clamp(8px, 1.65vw, 22px);
   font-weight: 700;
   line-height: 1.1;
   white-space: nowrap;
@@ -438,7 +437,7 @@
   display: block;
   margin-top: 1.5%;
   font-family: Arial, sans-serif;
-  font-size: clamp(3px, .47vw, 6px);
+  font-size: clamp(3px, .47vw, 7px);
   font-weight: 700;
   line-height: 1;
   letter-spacing: .4px;
@@ -473,7 +472,7 @@
 .ddsh-commtmklpfo-label {
   display: block;
   font-family: Arial, sans-serif;
-  font-size: clamp(3px, .55vw, 7px);
+  font-size: clamp(3px, .55vw, 9px);
   font-weight: 800;
   line-height: 1;
   letter-spacing: .35px;
@@ -485,7 +484,7 @@
   display: block;
   margin-top: 2%;
   overflow: hidden;
-  font-size: clamp(5px, 1vw, 13px);
+  font-size: clamp(5px, 1vw, 15px);
   font-weight: 500;
   line-height: 1.12;
   white-space: nowrap;
@@ -512,7 +511,7 @@
 
 .ddsh-commtmklpfo-subject-note-head span {
   font-family: Arial Black, Arial, sans-serif;
-  font-size: clamp(3px, .55vw, 7px);
+  font-size: clamp(3px, .55vw, 10px);
   font-weight: 900;
   letter-spacing: .4px;
 }
@@ -530,7 +529,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  font-size: clamp(5px, 1vw, 13px);
+  font-size: clamp(5px, 1vw, 15px);
   font-weight: 500;
   line-height: 1.3;
   text-align: justify;
@@ -765,7 +764,7 @@
 
 .ddsh-commtmklpfo-text {
   padding: 24px 26px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.9;
   text-align: justify;
@@ -788,7 +787,7 @@
   gap: 7px 10px;
   border-bottom: 1px solid var(--ddsh-commtmklpfo-light);
   font-family: "Courier New", monospace;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .ddsh-commtmklpfo-recordline span {
@@ -1193,82 +1192,143 @@
   .ddsh-commtmklpfo-main {
     width: 100%;
     max-width: 100%;
-    aspect-ratio: 1280 / 430;
-    grid-template-columns: 33.59375% 51.40625% 15%;
+    height: auto;
+    aspect-ratio: auto;
+    display: grid;
+    grid-template-columns: 32% 53% 15%;
+    align-items: start;
+  }
+
+  .ddsh-commtmklpfo-photos {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    align-self: start;
+  }
+
+  .ddsh-commtmklpfo-photo {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
 
   .ddsh-commtmklpfo-identification {
-    min-width: 0;
-    overflow: hidden;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    display: block;
+    overflow: visible;
+  }
+
+  .ddsh-commtmklpfo-blocktitle {
+    min-height: 20px;
+    height: auto;
+    padding: 4px 6px;
+    font-size: 5px;
+  }
+
+  .ddsh-commtmklpfo-name {
+    min-height: 54px;
+    height: auto;
+    padding: 7px 8px;
+    overflow: visible;
+  }
+
+  .ddsh-commtmklpfo-name > span {
+    font-size: 5px;
+    line-height: 1.1;
+  }
+
+  .ddsh-commtmklpfo-name > strong {
+    margin-top: 4px;
+    font-size: 13px;
+    line-height: 1.15;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .ddsh-commtmklpfo-name > small {
+    margin-top: 4px;
+    font-size: 4px;
+    line-height: 1.1;
   }
 
   .ddsh-commtmklpfo-info {
     width: 100%;
-    min-width: 0;
+    height: auto;
+    min-height: 0;
+    display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+    grid-auto-rows: minmax(38px, auto);
   }
 
   .ddsh-commtmklpfo-row {
     min-width: 0;
-    padding: 1.5% 2.5%;
+    min-height: 38px;
+    height: auto;
+    padding: 5px 6px;
+    overflow: visible;
+    justify-content: center;
   }
 
   .ddsh-commtmklpfo-label {
-    font-size: 4px;
-    letter-spacing: .2px;
+    font-size: 5px;
+    line-height: 1.05;
+    letter-spacing: .25px;
+    white-space: normal;
   }
 
   .ddsh-commtmklpfo-value {
     width: 100%;
     min-width: 0;
-    margin-top: 2px;
+    margin-top: 4px;
     overflow: visible;
-    font-size: 6px;
-    line-height: 1.05;
-    white-space: nowrap;
+    font-size: 8px;
+    line-height: 1.2;
+    white-space: normal;
     text-overflow: clip;
-  }
-
-  .ddsh-commtmklpfo-name {
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-  }
-
-  .ddsh-commtmklpfo-name > span {
-    font-size: 4px;
-  }
-
-  .ddsh-commtmklpfo-name > strong {
-    font-size: 10px;
-  }
-
-  .ddsh-commtmklpfo-name > small {
-    font-size: 3px;
-  }
-
-  .ddsh-commtmklpfo-blocktitle {
-    font-size: 4px;
+    overflow-wrap: anywhere;
   }
 
   .ddsh-commtmklpfo-subject-note {
-    padding-left: 2.5%;
-    padding-right: 2.5%;
+    width: 100%;
+    height: auto;
+    min-height: 52px;
+    padding: 7px 8px;
+    overflow: visible;
+  }
+
+  .ddsh-commtmklpfo-subject-note-head {
+    height: auto;
+    min-height: 12px;
+    margin: 0 0 5px;
   }
 
   .ddsh-commtmklpfo-subject-note-head span {
-    font-size: 4px;
+    font-size: 5px;
   }
 
   .ddsh-commtmklpfo-subject-note-head b {
-    font-size: 3px;
+    font-size: 4px;
   }
 
   .ddsh-commtmklpfo-subject-note p {
-    font-size: 6px;
+    min-height: 0;
+    overflow: visible;
+    font-size: 8px;
+    line-height: 1.35;
+  }
+
+  .ddsh-commtmklpfo-side {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    align-self: stretch;
   }
 
   .ddsh-commtmklpfo-sidebox {
-    padding: 4px;
+    padding: 5px 4px;
   }
 
   .ddsh-commtmklpfo-sidebox > span {
@@ -1277,26 +1337,29 @@
   }
 
   .ddsh-commtmklpfo-sidebox > strong {
-    margin: 2px 0;
-    font-size: 6px;
+    margin: 3px 0;
+    font-size: 7px;
+    line-height: 1;
   }
 
   .ddsh-commtmklpfo-sidebox > small {
     font-size: 3px;
+    line-height: 1.1;
+    white-space: normal;
   }
 
   .ddsh-commtmklpfo-redstamp {
     width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding: 4% 2%;
+    margin: auto 5%;
+    padding: 5px 2px;
   }
 
   .ddsh-commtmklpfo-redstamp strong {
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .ddsh-commtmklpfo-redstamp span {
+    margin-top: 2px;
     font-size: 3px;
   }
 
