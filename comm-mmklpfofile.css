@@ -46,9 +46,12 @@
 .ddsh-commtmklpfo-header {
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(220px, 1fr) minmax(330px, 1.45fr) minmax(210px, .72fr);
+  grid-template-columns:
+    minmax(230px, 1fr)
+    minmax(360px, 1.35fr)
+    minmax(230px, 1fr);
   align-items: stretch;
-  gap: clamp(14px, 2vw, 28px);
+  gap: clamp(14px, 1.5vw, 22px);
 }
 
 .ddsh-commtmklpfo-dept {
@@ -103,28 +106,35 @@
 
 .ddsh-commtmklpfo-title {
   min-width: 0;
+  width: 100%;
+  padding: 0 8px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   text-align: center;
 }
 
 .ddsh-commtmklpfo-title h1 {
+  width: 100%;
   margin: 0;
   font-family: Arial Black, Impact, Arial, sans-serif;
-  font-size: clamp(46px, 6vw, 88px);
+  font-size: clamp(48px, 5vw, 72px);
   font-weight: 900;
-  line-height: .84;
-  letter-spacing: clamp(2px, .5vw, 8px);
+  line-height: .86;
+  letter-spacing: clamp(1px, .25vw, 4px);
+  text-align: center;
   white-space: nowrap;
 }
 
 .ddsh-commtmklpfo-title span {
+  width: 100%;
   margin-top: 10px;
   font-family: Arial, sans-serif;
   font-size: clamp(8px, 1vw, 12px);
   font-weight: 800;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 .ddsh-commtmklpfo-number {
@@ -854,7 +864,7 @@
 }
 
 .ddsh-commtmklpfo-relations strong {
-  margin-top: px;
+  margin-top: 5px;
   font-size: clamp(12px, 1.25vw, 16px);
   font-weight: 600;
 }
@@ -950,16 +960,28 @@
 .ddsh-commtmklpfo-footer {
   width: 100%;
   margin-top: 14px;
-  padding-top: 11px;
+  padding: 11px 0 0;
   display: grid;
   grid-template-columns: 1fr auto auto;
   align-items: end;
   gap: 16px;
+  color: var(--ddsh-commtmklpfo-ink) !important;
+  background: transparent !important;
+  background-color: transparent !important;
   border-top: 2px solid var(--ddsh-commtmklpfo-ink);
+  box-shadow: none !important;
+}
+
+.ddsh-commtmklpfo-footer > div {
+  color: inherit;
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
 .ddsh-commtmklpfo-footer span {
   display: block;
+  color: var(--ddsh-commtmklpfo-ink) !important;
+  background: transparent !important;
   font-family: Arial, sans-serif;
   font-size: 6px;
   font-weight: 800;
@@ -969,12 +991,16 @@
 .ddsh-commtmklpfo-footer strong {
   display: block;
   margin-top: 2px;
+  color: var(--ddsh-commtmklpfo-ink) !important;
+  background: transparent !important;
   font-family: Arial, sans-serif;
   font-size: 8px;
   letter-spacing: .4px;
 }
 
 .ddsh-commtmklpfo-footer-code {
+  color: var(--ddsh-commtmklpfo-ink) !important;
+  background: transparent !important;
   font-family: "Courier New", monospace;
   font-size: 7px;
   font-weight: 700;
@@ -982,6 +1008,9 @@
 
 .ddsh-commtmklpfo-footerstamp {
   padding: 6px 10px;
+  color: var(--ddsh-commtmklpfo-ink) !important;
+  background: transparent !important;
+  background-color: transparent !important;
   border: 2px solid var(--ddsh-commtmklpfo-line);
   font-family: Arial, sans-serif;
   font-size: 8px;
@@ -1000,6 +1029,23 @@
     width: 1000px;
     min-width: 1000px;
     padding: 38px;
+  }
+
+  .ddsh-commtmklpfo-header {
+    grid-template-columns:
+      minmax(230px, 1fr)
+      minmax(360px, 1.35fr)
+      minmax(230px, 1fr);
+  }
+
+  .ddsh-commtmklpfo-title {
+    text-align: center;
+    align-items: center;
+  }
+
+  .ddsh-commtmklpfo-title h1 {
+    font-size: 72px;
+    text-align: center;
   }
 }
 
