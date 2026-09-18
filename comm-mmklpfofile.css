@@ -1152,27 +1152,62 @@
 
 @media (max-width: 700px) {
   .ddsh-commtmklpfofile {
-    width: 100%;
-    max-width: 100%;
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
     overflow: hidden;
   }
 
   .ddsh-commtmklpfo-content {
     width: 100%;
     min-width: 0;
-    padding: 8px;
+    padding: 10px;
   }
 
   .ddsh-commtmklpfo-header {
     width: 100%;
-    grid-template-columns: 24fr 48fr 28fr;
-    gap: 4px;
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .ddsh-commtmklpfo-dept {
+    width: 72px;
+    min-width: 0;
+    justify-content: center;
+  }
+
+  .ddsh-commtmklpfo-police-logo {
+    width: 58px;
+  }
+
+  .ddsh-commtmklpfo-depttext {
+    display: none;
+  }
+
+  .ddsh-commtmklpfo-title {
+    min-width: 0;
+    overflow: visible;
+  }
+
+  .ddsh-commtmklpfo-title h1 {
+    font-size: clamp(34px, 12vw, 52px);
+    letter-spacing: 1px;
+  }
+
+  .ddsh-commtmklpfo-title span {
+    margin-top: 6px;
+    font-size: 7px;
+    letter-spacing: 1.2px;
   }
 
   .ddsh-commtmklpfo-number {
+    grid-column: 1 / -1;
     width: 100%;
     min-width: 0;
     max-width: 100%;
+    margin-top: 2px;
+    padding: 8px 10px;
     overflow: hidden;
   }
 
@@ -1182,11 +1217,28 @@
     overflow: hidden;
   }
 
+  .ddsh-commtmklpfo-numbertop span {
+    font-size: 7px;
+  }
+
   .ddsh-commtmklpfo-numbertop strong {
     min-width: 0;
     max-width: 100%;
     overflow: hidden;
+    font-size: 14px;
     white-space: nowrap;
+  }
+
+  .ddsh-commtmklpfo-barcode {
+    height: 38px;
+  }
+
+  .ddsh-commtmklpfo-barcode-number {
+    font-size: 7px;
+  }
+
+  .ddsh-commtmklpfo-number small {
+    font-size: 6px;
   }
 
   .ddsh-commtmklpfo-main {
@@ -1205,13 +1257,25 @@
     min-width: 0;
     min-height: 0;
     aspect-ratio: 1 / 1;
-    align-self: stretch;
   }
 
   .ddsh-commtmklpfo-photo {
     width: 100%;
     height: 100%;
     aspect-ratio: 1 / 1;
+  }
+
+  .ddsh-commtmklpfo-height {
+    font-size: 7px;
+  }
+
+  .ddsh-commtmklpfo-photo-id strong {
+    font-size: 10px;
+  }
+
+  .ddsh-commtmklpfo-photo-id span,
+  .ddsh-commtmklpfo-photo-id b {
+    font-size: 7px;
   }
 
   .ddsh-commtmklpfo-identification {
@@ -1225,39 +1289,39 @@
 
   .ddsh-commtmklpfo-blocktitle {
     width: 100%;
-    min-height: 20px;
+    min-height: 32px;
     height: auto;
-    padding: 4px 6px;
+    padding: 7px 10px;
     overflow: visible;
-    font-size: 5px;
+    font-size: 8px;
   }
 
   .ddsh-commtmklpfo-name {
     width: 100%;
-    min-height: 54px;
+    min-height: 0;
     height: auto;
-    padding: 7px 8px;
+    padding: 12px 12px 11px;
     overflow: visible;
   }
 
   .ddsh-commtmklpfo-name > span {
-    font-size: 5px;
-    line-height: 1.1;
+    font-size: 8px;
+    line-height: 1.15;
   }
 
   .ddsh-commtmklpfo-name > strong {
-    margin-top: 4px;
-    font-size: 13px;
-    line-height: 1.15;
+    margin-top: 6px;
+    font-size: 21px;
+    line-height: 1.22;
     white-space: normal;
     overflow: visible;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
   }
 
   .ddsh-commtmklpfo-name > small {
-    margin-top: 4px;
-    font-size: 4px;
-    line-height: 1.1;
+    margin-top: 6px;
+    font-size: 7px;
+    line-height: 1.15;
   }
 
   .ddsh-commtmklpfo-info {
@@ -1267,64 +1331,65 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: none;
-    grid-auto-rows: minmax(44px, auto);
+    grid-auto-rows: auto;
   }
 
   .ddsh-commtmklpfo-row {
     min-width: 0;
-    min-height: 44px;
+    min-height: 64px;
     height: auto;
-    padding: 6px 7px;
+    padding: 9px 10px;
     overflow: visible;
     justify-content: center;
   }
 
   .ddsh-commtmklpfo-label {
-    font-size: 5px;
-    line-height: 1.05;
-    letter-spacing: .25px;
+    font-size: 8px;
+    line-height: 1.15;
+    letter-spacing: .35px;
     white-space: normal;
   }
 
   .ddsh-commtmklpfo-value {
     width: 100%;
     min-width: 0;
-    margin-top: 4px;
+    margin-top: 5px;
     overflow: visible;
-    font-size: 8px;
-    line-height: 1.2;
+    font-size: 14px;
+    line-height: 1.3;
     white-space: normal;
     text-overflow: clip;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
+    word-break: normal;
   }
 
   .ddsh-commtmklpfo-subject-note {
     width: 100%;
     height: auto;
-    min-height: 52px;
-    padding: 7px 8px;
+    min-height: 86px;
+    padding: 11px 12px 13px;
     overflow: visible;
   }
 
   .ddsh-commtmklpfo-subject-note-head {
     height: auto;
-    min-height: 12px;
-    margin: 0 0 5px;
+    min-height: 16px;
+    margin: 0 0 8px;
   }
 
   .ddsh-commtmklpfo-subject-note-head span {
-    font-size: 5px;
+    font-size: 8px;
   }
 
   .ddsh-commtmklpfo-subject-note-head b {
-    font-size: 4px;
+    font-size: 6px;
   }
 
   .ddsh-commtmklpfo-subject-note p {
     min-height: 0;
     overflow: visible;
-    font-size: 8px;
-    line-height: 1.35;
+    font-size: 14px;
+    line-height: 1.45;
   }
 
   .ddsh-commtmklpfo-side {
@@ -1333,14 +1398,13 @@
     min-height: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-self: stretch;
     overflow: visible;
   }
 
   .ddsh-commtmklpfo-sidebox {
     min-width: 0;
-    min-height: 58px;
-    padding: 7px 8px;
+    min-height: 80px;
+    padding: 10px;
     border-right: 1px solid var(--ddsh-commtmklpfo-line);
   }
 
@@ -1349,22 +1413,22 @@
   }
 
   .ddsh-commtmklpfo-sidebox > span {
-    font-size: 4px;
-    letter-spacing: .15px;
+    font-size: 7px;
+    letter-spacing: .3px;
   }
 
   .ddsh-commtmklpfo-sidebox > strong {
-    margin: 3px 0;
+    margin: 5px 0;
     overflow: visible;
-    font-size: 9px;
-    line-height: 1;
+    font-size: 17px;
+    line-height: 1.08;
     white-space: normal;
   }
 
   .ddsh-commtmklpfo-sidebox > small {
     overflow: visible;
-    font-size: 4px;
-    line-height: 1.15;
+    font-size: 7px;
+    line-height: 1.25;
     white-space: normal;
   }
 
@@ -1372,29 +1436,58 @@
     grid-column: 1 / -1;
     width: min(260px, 72%);
     margin: 18px auto;
-    padding: 8px 6px;
+    padding: 10px 7px 8px;
   }
 
   .ddsh-commtmklpfo-redstamp strong {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .ddsh-commtmklpfo-redstamp span {
-    margin-top: 3px;
-    font-size: 8px;
+    margin-top: 4px;
+    font-size: 9px;
   }
 
   .ddsh-commtmklpfo-photo-caption {
     width: 100%;
     max-width: 100%;
-    padding: 3px 4px;
+    padding: 5px 6px;
+    gap: 6px;
+    font-size: 5px;
+    white-space: normal;
   }
 
   .ddsh-commtmklpfo-chargebox,
   .ddsh-commtmklpfo-section,
   .ddsh-commtmklpfo-bottom,
   .ddsh-commtmklpfo-footer {
+    width: 100%;
     max-width: 100%;
+  }
+
+  .ddsh-commtmklpfo-charge-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ddsh-commtmklpfo-charge-grid > div {
+    min-height: 58px;
+    padding: 8px;
+  }
+
+  .ddsh-commtmklpfo-charge-grid > div:nth-child(even) {
+    border-right: 0;
+  }
+
+  .ddsh-commtmklpfo-charge-grid span {
+    font-size: 6px;
+  }
+
+  .ddsh-commtmklpfo-charge-grid strong {
+    margin-top: 5px;
+    overflow: visible;
+    font-size: 10px;
+    white-space: normal;
+    text-overflow: clip;
   }
 
   .ddsh-commtmklpfo-sectionhead {
@@ -1425,7 +1518,7 @@
 
   .ddsh-commtmklpfo-text {
     padding: 16px 14px;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.8;
   }
 
@@ -1525,6 +1618,8 @@
   }
 
   .ddsh-commtmklpfo-footer {
+    grid-template-columns: 1fr;
+    align-items: start;
     gap: 7px;
   }
 
@@ -1533,6 +1628,8 @@
   }
 
   .ddsh-commtmklpfo-footerstamp {
+    width: max-content;
+    max-width: 100%;
     padding: 4px 5px;
     font-size: 5px;
   }
