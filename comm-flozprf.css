@@ -215,7 +215,7 @@
 .ddshcomf-pf-name {
   position:absolute;
   right:11%;
-  bottom:15%;
+  bottom:19%;
   z-index:24;
   display:block;
   max-width:45%;
@@ -447,11 +447,10 @@
   transition:width .35s ease,color .25s ease;
 }
 
-.ddshcomf-pf-canvas .ddscomm-crz span .bi {
-  display:inline;
-  font-size:8px;
-  font-style:normal;
-  color:inherit;
+.ddshcomf-pf-canvas .ddscomm-crz span::before {
+  content:"✦ deepdeepsleepfranklin";
+  display:block;
+  white-space:nowrap;
 }
 
 .ddshcomf-pf-canvas .ddscomm-crz span:hover {
