@@ -1,0 +1,495 @@
+
+.ddshcomf-pf {
+  display:block;
+  width:100%;
+  max-width:100%;
+  min-width:0;
+  margin:0 auto;
+  padding:0;
+  box-sizing:border-box;
+  container-type:inline-size;
+  font-family:'Bai Jamjuree',sans-serif;
+  background:transparent;
+}
+
+.ddshcomf-pf *,
+.ddshcomf-pf *::before,
+.ddshcomf-pf *::after {
+  box-sizing:border-box;
+}
+
+.ddshcomf-pf-canvas {
+  position:relative;
+  display:block;
+  width:100%;
+  aspect-ratio:1055/1414;
+  overflow:hidden;
+  isolation:isolate;
+  background:var(--ddshcomf-pf-paper);
+  color:var(--ddshcomf-pf-text);
+}
+
+.ddshcomf-pf-grain {
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  opacity:.25;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
+}
+
+.ddshcomf-pf-photo,
+.ddshcomf-pf-film {
+  position:absolute;
+  background:var(--ddshcomf-pf-frame);
+  padding:1.4%;
+  box-shadow:0 .2cqw .65cqw rgba(28,22,19,.22);
+  transform-origin:center;
+}
+
+.ddshcomf-pf-photo-image {
+  display:block;
+  width:100%;
+  height:100%;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.ddshcomf-pf-film {
+  width:68%;
+  height:60%;
+  left:23%;
+  top:28%;
+  z-index:1;
+  padding:1%;
+  transform:rotate(13deg);
+  background-image:var(--ddshcomf-pf-img6);
+  background-size:cover;
+  background-position:center;
+}
+
+.ddshcomf-pf-photo-back {
+  width:56%;
+  height:25%;
+  left:39%;
+  top:26%;
+  z-index:2;
+  transform:rotate(11deg);
+  padding:1%;
+}
+
+.ddshcomf-pf-photo-back .ddshcomf-pf-photo-image {
+  background-image:var(--ddshcomf-pf-img3);
+}
+
+.ddshcomf-pf-photo-one {
+  width:26%;
+  height:25%;
+  left:20%;
+  top:24%;
+  z-index:6;
+  transform:rotate(-7deg);
+  padding:2%;
+}
+
+.ddshcomf-pf-photo-one .ddshcomf-pf-photo-image {
+  background-image:var(--ddshcomf-pf-img1);
+}
+
+.ddshcomf-pf-photo-two {
+  width:25%;
+  height:25%;
+  left:42%;
+  top:22%;
+  z-index:7;
+  transform:rotate(7deg);
+  padding:2%;
+}
+
+.ddshcomf-pf-photo-two .ddshcomf-pf-photo-image {
+  background-image:var(--ddshcomf-pf-img2);
+}
+
+.ddshcomf-pf-photo-left {
+  width:64%;
+  height:41%;
+  left:7%;
+  top:43%;
+  z-index:8;
+  transform:rotate(15deg);
+  padding:0;
+}
+
+.ddshcomf-pf-photo-left .ddshcomf-pf-photo-image {
+  background-image:var(--ddshcomf-pf-img4);
+}
+
+.ddshcomf-pf-photo-bottom {
+  width:65%;
+  height:38%;
+  left:25%;
+  top:51%;
+  z-index:9;
+  transform:rotate(12deg);
+  padding:1%;
+}
+
+.ddshcomf-pf-photo-bottom .ddshcomf-pf-photo-image {
+  background-image:var(--ddshcomf-pf-img6);
+}
+
+.ddshcomf-pf-photo-main {
+  width:55%;
+  height:31%;
+  left:36%;
+  top:46%;
+  z-index:13;
+  padding:2% 2% 7%;
+  transform:rotate(-4deg);
+  border-radius:.4cqw;
+}
+
+.ddshcomf-pf-photo-main .ddshcomf-pf-photo-image {
+  background-image:var(--ddshcomf-pf-img5);
+}
+
+.ddshcomf-pf-writing {
+  position:absolute;
+  display:block;
+  margin:0;
+  padding:0;
+  width:max-content;
+  max-width:none;
+  font-family:'Nothing You Could Do',cursive;
+  font-style:italic;
+  font-weight:400;
+  line-height:1;
+  white-space:nowrap;
+  color:var(--ddshcomf-pf-text);
+  pointer-events:none;
+  letter-spacing:-.09em;
+  transform-origin:center;
+  text-shadow:.08cqw .04cqw 0 rgba(130,20,16,.08);
+}
+
+.ddshcomf-pf-word1 {
+  left:11%;
+  top:8%;
+  z-index:20;
+  font-size:24cqw;
+  transform:rotate(-5deg);
+}
+
+.ddshcomf-pf-word2 {
+  left:31%;
+  top:39%;
+  z-index:11;
+  font-size:19cqw;
+  transform:rotate(-7deg);
+}
+
+.ddshcomf-pf-word3 {
+  left:2%;
+  top:54%;
+  z-index:20;
+  font-size:21cqw;
+  transform:rotate(-7deg);
+}
+
+.ddshcomf-pf-word4 {
+  left:38%;
+  top:72%;
+  z-index:20;
+  font-size:20cqw;
+  transform:rotate(-7deg);
+}
+
+.ddshcomf-pf-player {
+  position:absolute;
+  left:9%;
+  bottom:7%;
+  z-index:25;
+  width:34%;
+  display:flex;
+  align-items:center;
+  gap:1.2cqw;
+  padding:1.2cqw;
+  background:var(--ddshcomf-pf-music-bg);
+  color:var(--ddshcomf-pf-music-title);
+  border:1px solid var(--ddshcomf-pf-music-border);
+  border-radius:.65cqw;
+  box-shadow:0 .5cqw 1.8cqw rgba(0,0,0,.12);
+  transform:rotate(-7deg);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+
+.ddshcomf-pf-cover {
+  display:block;
+  flex:0 0 8cqw;
+  width:8cqw;
+  height:8cqw;
+  background-image:var(--ddshcomf-pf-music-cover);
+  background-position:center;
+  background-size:cover;
+  border-radius:.25cqw;
+}
+
+.ddshcomf-pf-music-info {
+  flex:1;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:.45cqw;
+}
+
+.ddshcomf-pf-now {
+  display:flex;
+  align-items:center;
+  gap:.5cqw;
+  font-size:1.15cqw;
+  font-weight:700;
+  letter-spacing:.09em;
+  color:var(--ddshcomf-pf-music-label);
+  white-space:nowrap;
+}
+
+.ddshcomf-pf-dot {
+  display:inline-block;
+  flex:0 0 auto;
+  width:.7cqw;
+  height:.7cqw;
+  background:var(--ddshcomf-pf-music-accent);
+  border-radius:50%;
+}
+
+.ddshcomf-pf-spotify {
+  margin-left:auto;
+  color:var(--ddshcomf-pf-music-accent);
+  font-size:2.1cqw;
+  line-height:1;
+}
+
+.ddshcomf-pf-song-name {
+  display:block;
+  width:100%;
+  font-size:1.9cqw;
+  line-height:1.2;
+  font-weight:700;
+  color:var(--ddshcomf-pf-music-title);
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.ddshcomf-pf-artist-name {
+  display:block;
+  width:100%;
+  font-size:1.3cqw;
+  line-height:1.2;
+  color:var(--ddshcomf-pf-music-artist);
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.ddshcomf-pf-progress {
+  width:100%;
+  height:.38cqw;
+  margin-top:.5cqw;
+  overflow:hidden;
+  border-radius:20px;
+  background:var(--ddshcomf-pf-music-track);
+}
+
+.ddshcomf-pf-progress-fill {
+  width:35%;
+  height:100%;
+  border-radius:20px;
+  background:var(--ddshcomf-pf-music-accent);
+  animation:ddshcomf-pf-song-progress 180s linear infinite;
+}
+
+.ddshcomf-pf-equalizer {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:.33cqw;
+  width:3cqw;
+  height:3cqw;
+  flex:0 0 3cqw;
+  align-self:flex-end;
+  margin-bottom:.4cqw;
+}
+
+.ddshcomf-pf-equalizer i {
+  display:block;
+  width:.38cqw;
+  height:70%;
+  background:var(--ddshcomf-pf-music-accent);
+  border-radius:2px;
+  animation:ddshcomf-pf-bars .8s ease-in-out infinite alternate;
+}
+
+.ddshcomf-pf-equalizer i:nth-child(2) {
+  height:100%;
+  animation-delay:-.3s;
+}
+
+.ddshcomf-pf-equalizer i:nth-child(3) {
+  height:45%;
+  animation-delay:-.5s;
+}
+
+.ddshcomf-pf-equalizer i:nth-child(4) {
+  height:80%;
+  animation-delay:-.15s;
+}
+
+.ddshcomf-pf-youtube {
+  position:absolute;
+  width:0;
+  height:0;
+  left:0;
+  bottom:0;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  border:0;
+  opacity:0;
+  pointer-events:none;
+}
+
+.ddshcomf-pf-youtube iframe {
+  display:block;
+  width:0;
+  height:0;
+  min-width:0;
+  min-height:0;
+  border:0;
+  margin:0;
+  padding:0;
+}
+
+.ddshcomf-pf-canvas .ddscomm-crz {
+  position:absolute;
+  bottom:5px;
+  left:50%;
+  transform:translateX(-50%);
+  width:110px;
+  height:13px;
+  margin:0;
+  padding:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:30;
+  background:transparent;
+  font-family:Arial,sans-serif;
+}
+
+.ddshcomf-pf-canvas .ddscomm-crz span {
+  display:block;
+  width:11px;
+  height:10px;
+  overflow:hidden;
+  white-space:nowrap;
+  color:#999999;
+  font-size:7px;
+  font-weight:400;
+  line-height:10px;
+  letter-spacing:.7px;
+  text-align:left;
+  font-style:italic;
+  cursor:help;
+  user-select:none;
+  -webkit-user-select:none;
+  transition:width .35s ease,color .25s ease;
+}
+
+.ddshcomf-pf-canvas .ddscomm-crz span::before {
+  content:"✦ deepdeepsleepfranklin";
+  display:block;
+}
+
+.ddshcomf-pf-canvas .ddscomm-crz span:hover {
+  width:110px;
+  color:#999999;
+}
+
+@keyframes ddshcomf-pf-bars {
+  0% {
+    transform:scaleY(.25);
+  }
+  100% {
+    transform:scaleY(1);
+  }
+}
+
+@keyframes ddshcomf-pf-song-progress {
+  0% {
+    width:0%;
+  }
+  100% {
+    width:100%;
+  }
+}
+
+@container (max-width:470px) {
+  .ddshcomf-pf-player {
+    width:39%;
+    left:7%;
+    bottom:7%;
+    padding:1.3cqw;
+    gap:1.2cqw;
+  }
+
+  .ddshcomf-pf-cover {
+    width:8.5cqw;
+    height:8.5cqw;
+    flex-basis:8.5cqw;
+  }
+
+  .ddshcomf-pf-now {
+    font-size:1.4cqw;
+  }
+
+  .ddshcomf-pf-song-name {
+    font-size:2.25cqw;
+  }
+
+  .ddshcomf-pf-artist-name {
+    font-size:1.6cqw;
+  }
+
+  .ddshcomf-pf-spotify {
+    font-size:2.5cqw;
+  }
+}
+
+@media(max-width:480px) {
+  .ddshcomf-pf {
+    max-width:100%;
+  }
+
+  .ddshcomf-pf-canvas {
+    width:100%;
+  }
+
+  .ddshcomf-pf-canvas .ddscomm-crz {
+    bottom:5px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .ddshcomf-pf-equalizer i,
+  .ddshcomf-pf-progress-fill {
+    animation:none;
+  }
+
+  .ddshcomf-pf-canvas .ddscomm-crz span {
+    transition:none;
+  }
+}
