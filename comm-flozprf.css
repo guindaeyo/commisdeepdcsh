@@ -492,4 +492,22 @@
   .ddshcomf-pf-canvas .ddscomm-crz span {
     transition:none;
   }
+.ddshcomf-pf {
+  background:transparent !important;
+}
+
+.ddshcomf-pf-canvas {
+  background:transparent !important;
+  background-color:transparent !important;
+  background-image:none !important;
+}
+
+.ddshcomf-pf-grain {
+  display:none !important;
+}
+
+.ddshcomf-pf-canvas::before,
+.ddshcomf-pf-canvas::after {
+  background:none !important;
+}
 }
