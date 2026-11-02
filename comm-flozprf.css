@@ -263,16 +263,25 @@
   white-space:nowrap;
 }
 
+.ddshcomf-pf-now > span {
+  display:block;
+  white-space:nowrap;
+}
+
 .ddshcomf-pf-dot {
-  display:inline-block;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
   flex:0 0 auto;
-  width:.7cqw;
-  height:.7cqw;
-  background:var(--ddshcomf-pf-music-accent);
-  border-radius:50%;
+  font-size:.7cqw;
+  line-height:1;
+  color:var(--ddshcomf-pf-music-accent);
 }
 
 .ddshcomf-pf-spotify {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
   margin-left:auto;
   color:var(--ddshcomf-pf-music-accent);
   font-size:2.1cqw;
@@ -385,7 +394,7 @@
   bottom:5px;
   left:50%;
   transform:translateX(-50%);
-  width:110px;
+  width:130px;
   height:13px;
   margin:0;
   padding:0;
@@ -416,13 +425,15 @@
   transition:width .35s ease,color .25s ease;
 }
 
-.ddshcomf-pf-canvas .ddscomm-crz span::before {
-  content:"✦ deepdeepsleepfranklin";
-  display:block;
+.ddshcomf-pf-canvas .ddscomm-crz span .bi {
+  display:inline;
+  font-size:8px;
+  font-style:normal;
+  color:inherit;
 }
 
 .ddshcomf-pf-canvas .ddscomm-crz span:hover {
-  width:110px;
+  width:125px;
   color:#999999;
 }
 
@@ -430,6 +441,7 @@
   0% {
     transform:scaleY(.25);
   }
+
   100% {
     transform:scaleY(1);
   }
@@ -439,6 +451,7 @@
   0% {
     width:0%;
   }
+
   100% {
     width:100%;
   }
@@ -461,6 +474,10 @@
 
   .ddshcomf-pf-now {
     font-size:1.4cqw;
+  }
+
+  .ddshcomf-pf-dot {
+    font-size:.9cqw;
   }
 
   .ddshcomf-pf-song-name {
