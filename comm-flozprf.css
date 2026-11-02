@@ -1,546 +1,322 @@
 
-.ddshcomf-pf {
-  display:block;
-  width:100%;
-  max-width:100%;
-  min-width:0;
-  margin:0 auto;
-  padding:0;
-  box-sizing:border-box;
-  container-type:inline-size;
-  background:transparent !important;
-  background-color:transparent !important;
-  background-image:none !important;
-  font-family:'Bai Jamjuree',sans-serif;
+@font-face{
+font-family:'DDSh SignPainter';
+src:url('https://raw.githubusercontent.com/guindaeyo/commisdeepdcsh/main/SignPainter%20HouseScript%20Regular.ttf') format('truetype');
+font-weight:400;
+font-style:normal;
+font-display:swap;
 }
-
-.ddshcomf-pf *,
-.ddshcomf-pf *::before,
-.ddshcomf-pf *::after {
-  box-sizing:border-box;
+.ddsh-enjoy-wrap{
+width:100%;
+max-width:650px;
+margin:0 auto;
+padding:0;
+box-sizing:border-box;
 }
-
-.ddshcomf-pf-canvas {
-  position:relative;
-  display:block;
-  width:100%;
-  transform:translateY(-5%);
-  aspect-ratio:1055/1414;
-  overflow:hidden;
-  isolation:isolate;
-  background:transparent !important;
-  background-color:transparent !important;
-  background-image:none !important;
-  color:var(--ddshcomf-pf-text);
+.ddsh-enjoy{
+width:100%;
+margin:0;
+padding:0 0 25px;
+box-sizing:border-box;
+background:var(--de-bg);
+color:var(--de-text);
+font-family:'Bai Jamjuree',sans-serif;
+position:relative;
+overflow:hidden;
 }
-
-.ddshcomf-pf-canvas::before,
-.ddshcomf-pf-canvas::after {
-  content:none !important;
-  background:none !important;
+.ddsh-enjoy-wrap *,
+.ddsh-enjoy-wrap *::before,
+.ddsh-enjoy-wrap *::after{
+box-sizing:border-box;
 }
-
-.ddshcomf-pf-grain {
-  display:none !important;
-  background:none !important;
+.ddsh-enjoy-meta{
+position:absolute;
+top:10px;
+left:20px;
+font-family:'Roboto Mono',monospace;
+font-size:8px;
+letter-spacing:1px;
+color:var(--de-meta);
+z-index:8;
 }
-
-.ddshcomf-pf-photo,
-.ddshcomf-pf-film {
-  position:absolute;
-  background:var(--ddshcomf-pf-frame);
-  padding:1.4%;
-  box-shadow:0 .2cqw .65cqw rgba(28,22,19,.22);
-  transform-origin:center;
+.ddsh-enjoy-heading{
+height:207px;
+position:relative;
+z-index:5;
+pointer-events:none;
 }
-
-.ddshcomf-pf-photo-image {
-  display:block;
-  width:100%;
-  height:100%;
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
+.ddsh-enjoy-script{
+position:absolute;
+top:48px;
+left:16%;
+width:275px;
+height:185px;
+font-family:'DDSh SignPainter',cursive;
+font-weight:400;
+color:var(--de-script);
+transform:translate(var(--de-title-x),var(--de-title-y)) scale(var(--de-title-scale)) rotate(-7deg);
+transform-origin:top left;
+white-space:nowrap;
 }
-
-.ddshcomf-pf-film {
-  width:68%;
-  height:60%;
-  left:23%;
-  top:28%;
-  z-index:1;
-  padding:1%;
-  transform:rotate(13deg);
-  background-image:var(--ddshcomf-pf-img6);
-  background-size:cover;
-  background-position:center;
+.ddsh-enjoy-script span{
+display:block;
+position:absolute;
+letter-spacing:0;
+font-weight:400;
 }
-
-.ddshcomf-pf-photo-back {
-  width:56%;
-  height:25%;
-  left:39%;
-  top:26%;
-  z-index:2;
-  transform:rotate(11deg);
-  padding:1%;
+.ddsh-enjoy-w1{
+top:0;
+left:0;
+font-size:103px;
+line-height:1;
 }
-
-.ddshcomf-pf-photo-back .ddshcomf-pf-photo-image {
-  background-image:var(--ddshcomf-pf-img3);
+.ddsh-enjoy-w2{
+top:66px;
+left:47px;
+font-size:68px;
+line-height:1;
 }
-
-.ddshcomf-pf-photo-one {
-  width:26%;
-  height:25%;
-  left:20%;
-  top:24%;
-  z-index:6;
-  transform:rotate(-7deg);
-  padding:2%;
+.ddsh-enjoy-w3{
+top:105px;
+left:-4px;
+font-size:91px;
+line-height:1;
 }
-
-.ddshcomf-pf-photo-one .ddshcomf-pf-photo-image {
-  background-image:var(--ddshcomf-pf-img1);
+.ddsh-enjoy-mark1,
+.ddsh-enjoy-mark2{
+position:absolute;
+height:3px;
+background:var(--de-script);
+border-radius:50%;
+transform-origin:center center;
 }
-
-.ddshcomf-pf-photo-two {
-  width:25%;
-  height:25%;
-  left:42%;
-  top:22%;
-  z-index:7;
-  transform:rotate(7deg);
-  padding:2%;
+.ddsh-enjoy-mark1{
+width:135px;
+top:194px;
+left:56px;
+transform:rotate(var(--de-mark1-rotate,7deg));
 }
-
-.ddshcomf-pf-photo-two .ddshcomf-pf-photo-image {
-  background-image:var(--ddshcomf-pf-img2);
+.ddsh-enjoy-mark2{
+width:109px;
+top:201px;
+left:70px;
+transform:rotate(var(--de-mark2-rotate,7deg));
 }
-
-.ddshcomf-pf-photo-left {
-  width:64%;
-  height:41%;
-  left:7%;
-  top:43%;
-  z-index:8;
-  transform:rotate(15deg);
-  padding:0;
+.ddsh-enjoy-gallery{
+display:grid;
+grid-template-columns:repeat(3,minmax(0,1fr));
+gap:4px;
+width:100%;
+padding:0 0 18px;
+margin:0;
+position:relative;
+z-index:2;
 }
-
-.ddshcomf-pf-photo-left .ddshcomf-pf-photo-image {
-  background-image:var(--ddshcomf-pf-img4);
+.ddsh-enjoy-frame{
+width:100%;
+min-width:0;
+aspect-ratio:1/1;
+position:relative;
+background:var(--de-frame);
+border:1px solid rgba(150,145,135,.13);
+padding:10px 5px 9px;
+box-shadow:0 1px 2px rgba(0,0,0,.018);
 }
-
-.ddshcomf-pf-photo-bottom {
-  width:65%;
-  height:38%;
-  left:25%;
-  top:51%;
-  z-index:9;
-  transform:rotate(12deg);
-  padding:1%;
+.ddsh-enjoy-photo{
+width:100%;
+height:100%;
+background-size:cover;
+background-repeat:no-repeat;
 }
-
-.ddshcomf-pf-photo-bottom .ddshcomf-pf-photo-image {
-  background-image:var(--ddshcomf-pf-img6);
+.ddsh-enjoy-photo1{
+background-image:var(--de-img1);
+background-position:var(--de-pos1);
+filter:var(--de-filter1);
 }
-
-.ddshcomf-pf-photo-main {
-  width:55%;
-  height:31%;
-  left:36%;
-  top:46%;
-  z-index:13;
-  padding:2% 2% 7%;
-  transform:rotate(-4deg);
-  border-radius:.4cqw;
+.ddsh-enjoy-photo2{
+background-image:var(--de-img2);
+background-position:var(--de-pos2);
+filter:var(--de-filter2);
 }
-
-.ddshcomf-pf-photo-main .ddshcomf-pf-photo-image {
-  background-image:var(--ddshcomf-pf-img5);
+.ddsh-enjoy-photo3{
+background-image:var(--de-img3);
+background-position:var(--de-pos3);
+filter:var(--de-filter3);
 }
-
-.ddshcomf-pf-writing {
-  position:absolute;
-  display:block;
-  margin:0;
-  padding:0;
-  width:max-content;
-  max-width:none;
-  font-family:'Nothing You Could Do',cursive;
-  font-style:italic;
-  font-weight:400;
-  line-height:1;
-  white-space:nowrap;
-  color:var(--ddshcomf-pf-text);
-  pointer-events:none;
-  letter-spacing:-.09em;
-  transform-origin:center;
-  text-shadow:.08cqw .04cqw 0 rgba(130,20,16,.08);
+.ddsh-enjoy-tape{
+position:absolute;
+width:105px;
+height:19px;
+left:12px;
+bottom:-10px;
+z-index:6;
+background:
+repeating-linear-gradient(
+110deg,
+rgba(255,255,255,.16) 0px,
+rgba(255,255,255,.03) 2px,
+rgba(110,102,85,.04) 4px,
+rgba(255,255,255,.09) 6px
+),
+linear-gradient(
+90deg,
+rgba(230,226,212,.7),
+var(--de-tape),
+rgba(229,225,210,.65)
+);
+opacity:.68;
+transform:rotate(-5deg);
+clip-path:polygon(0 5%,100% 0,98% 95%,1% 100%);
+box-shadow:0 1px 2px rgba(0,0,0,.025);
 }
-
-.ddshcomf-pf-word1 {
-  left:11%;
-  top:8%;
-  z-index:20;
-  font-size:24cqw;
-  transform:rotate(-5deg);
+.ddsh-enjoy-tape::after{
+content:"";
+position:absolute;
+inset:0;
+background:repeating-linear-gradient(
+0deg,
+transparent 0px,
+rgba(255,255,255,.18) 1px,
+transparent 2px,
+transparent 4px
+);
+opacity:.5;
 }
-
-.ddshcomf-pf-word2 {
-  left:31%;
-  top:36%;
-  z-index:11;
-  font-size:19cqw;
-  transform:rotate(-7deg);
+.ddsh-enjoy-content{
+padding:47px 10% 0;
 }
-
-.ddshcomf-pf-word3 {
-  left:2%;
-  top:54%;
-  z-index:20;
-  font-size:21cqw;
-  transform:rotate(-7deg);
+.ddsh-enjoy-name{
+font-family:'Roboto Mono',monospace;
+font-size:12px;
+font-weight:500;
+letter-spacing:1px;
+text-transform:uppercase;
+color:var(--de-name);
+margin-bottom:24px;
 }
-
-.ddshcomf-pf-word4 {
-  left:38%;
-  top:72%;
-  z-index:20;
-  font-size:20cqw;
-  transform:rotate(-7deg);
+.ddsh-enjoy-roleplay{
+font-family:'Bai Jamjuree',sans-serif;
+font-size:15px;
+font-weight:400;
+line-height:1.9;
+text-align:justify;
+color:var(--de-text);
+overflow-wrap:anywhere;
 }
-
-.ddshcomf-pf-name {
-  position:absolute;
-  right:12.5%;
-  bottom:14.5%;
-  z-index:24;
-  display:block;
-  max-width:45%;
-  margin:0;
-  padding:0;
-  font-family:'Nothing You Could Do',cursive;
-  font-size:3.1cqw;
-  font-weight:400;
-  line-height:1;
-  color:var(--ddshcomf-pf-text);
-  opacity:.72;
-  letter-spacing:.02em;
-  transform:rotate(-4deg);
-  transform-origin:center;
-  pointer-events:none;
-  white-space:nowrap;
+.ddsh-enjoy-roleplay p{
+margin:0 0 20px;
 }
-
-.ddshcomf-pf-player {
-  position:absolute;
-  left:9%;
-  bottom:7%;
-  z-index:25;
-  width:34%;
-  display:flex;
-  align-items:center;
-  gap:1.2cqw;
-  padding:1.2cqw;
-  background:var(--ddshcomf-pf-music-bg);
-  color:var(--ddshcomf-pf-music-title);
-  border:1px solid var(--ddshcomf-pf-music-border);
-  border-radius:.65cqw;
-  box-shadow:0 .5cqw 1.8cqw rgba(0,0,0,.12);
-  transform:rotate(-7deg);
-  backdrop-filter:blur(10px);
-  -webkit-backdrop-filter:blur(10px);
+.ddsh-enjoy-roleplay p:last-child{
+margin-bottom:0;
 }
-
-.ddshcomf-pf-cover {
-  display:block;
-  flex:0 0 8cqw;
-  width:8cqw;
-  height:8cqw;
-  background-image:var(--ddshcomf-pf-music-cover);
-  background-position:center;
-  background-size:cover;
-  border-radius:.25cqw;
+.ddsh-enjoy-note{
+margin-top:38px;
+padding-top:15px;
+border-top:1px solid rgba(150,145,135,.18);
+display:flex;
+gap:18px;
+align-items:flex-start;
 }
-
-.ddshcomf-pf-music-info {
-  flex:1;
-  min-width:0;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  gap:.45cqw;
+.ddsh-enjoy-note span{
+font-family:'Roboto Mono',monospace;
+font-size:10px;
+font-weight:500;
+letter-spacing:1px;
+color:var(--de-name);
+white-space:nowrap;
+padding-top:5px;
 }
-
-.ddshcomf-pf-now {
-  display:flex;
-  align-items:center;
-  gap:.5cqw;
-  font-size:1.15cqw;
-  font-weight:700;
-  letter-spacing:.09em;
-  color:var(--ddshcomf-pf-music-label);
-  white-space:nowrap;
+.ddsh-enjoy-note div{
+flex:1;
+min-width:0;
+font-family:'Bai Jamjuree',sans-serif;
+font-size:15px;
+font-weight:400;
+line-height:1.75;
+color:var(--de-note);
+overflow-wrap:anywhere;
 }
-
-.ddshcomf-pf-now > span {
-  display:block;
-  white-space:nowrap;
+.ddsh-enjoy-wrap .ddsh-commitflorolz{
+display:flex;
+position:relative;
+align-items:center;
+justify-content:center;
+width:100%;
+height:10px;
+margin:5px 0 0;
+padding:0;
+font-family:'Bai Jamjuree',sans-serif;
 }
-
-.ddshcomf-pf-dot {
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  flex:0 0 auto;
-  font-size:.7cqw;
-  line-height:1;
-  color:var(--ddshcomf-pf-music-accent);
+.ddsh-enjoy-wrap .ddsh-commitflorolz span{
+display:block;
+flex:0 0 auto;
+width:11px;
+height:10px;
+overflow:hidden;
+white-space:nowrap;
+color:#999999;
+font-size:7px;
+font-weight:400;
+line-height:10px;
+letter-spacing:.7px;
+text-align:left;
+font-style:italic;
+cursor:help;
+user-select:none;
+-webkit-user-select:none;
+transition:width .35s ease,color .25s ease;
 }
-
-.ddshcomf-pf-spotify {
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  margin-left:auto;
-  color:var(--ddshcomf-pf-music-accent);
-  font-size:2.1cqw;
-  line-height:1;
+.ddsh-enjoy-wrap .ddsh-commitflorolz span::before{
+content:"✦ deepdeepsleepfranklin";
+display:block;
+white-space:nowrap;
 }
-
-.ddshcomf-pf-song-name {
-  display:block;
-  width:100%;
-  font-size:1.9cqw;
-  line-height:1.2;
-  font-weight:700;
-  color:var(--ddshcomf-pf-music-title);
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
+.ddsh-enjoy-wrap .ddsh-commitflorolz span:hover{
+width:125px;
+color:#999999;
 }
-
-.ddshcomf-pf-artist-name {
-  display:block;
-  width:100%;
-  font-size:1.3cqw;
-  line-height:1.2;
-  color:var(--ddshcomf-pf-music-artist);
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
+@media(max-width:520px){
+.ddsh-enjoy-heading{
+height:160px;
 }
-
-.ddshcomf-pf-progress {
-  width:100%;
-  height:.38cqw;
-  margin-top:.5cqw;
-  overflow:hidden;
-  border-radius:20px;
-  background:var(--ddshcomf-pf-music-track);
+.ddsh-enjoy-script{
+top:38px;
+left:15%;
+transform:translate(var(--de-title-x),var(--de-title-y)) scale(calc(var(--de-title-scale) * .75)) rotate(-7deg);
 }
-
-.ddshcomf-pf-progress-fill {
-  width:35%;
-  height:100%;
-  border-radius:20px;
-  background:var(--ddshcomf-pf-music-accent);
-  animation:ddshcomf-pf-song-progress 180s linear infinite;
+.ddsh-enjoy-gallery{
+gap:3px;
 }
-
-.ddshcomf-pf-equalizer {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:.33cqw;
-  width:3cqw;
-  height:3cqw;
-  flex:0 0 3cqw;
-  align-self:flex-end;
-  margin-bottom:.4cqw;
+.ddsh-enjoy-frame{
+aspect-ratio:1/1;
+padding:6px 3px 5px;
 }
-
-.ddshcomf-pf-equalizer i {
-  display:block;
-  width:.38cqw;
-  height:70%;
-  background:var(--ddshcomf-pf-music-accent);
-  border-radius:2px;
-  animation:ddshcomf-pf-bars .8s ease-in-out infinite alternate;
+.ddsh-enjoy-photo{
+height:100%;
 }
-
-.ddshcomf-pf-equalizer i:nth-child(2) {
-  height:100%;
-  animation-delay:-.3s;
+.ddsh-enjoy-tape{
+width:65px;
+height:13px;
+left:6px;
+bottom:-7px;
 }
-
-.ddshcomf-pf-equalizer i:nth-child(3) {
-  height:45%;
-  animation-delay:-.5s;
+.ddsh-enjoy-content{
+padding:40px 9% 0;
 }
-
-.ddshcomf-pf-equalizer i:nth-child(4) {
-  height:80%;
-  animation-delay:-.15s;
+.ddsh-enjoy-meta{
+left:14px;
+font-size:7px;
 }
-
-.ddshcomf-pf-youtube {
-  position:absolute;
-  width:0;
-  height:0;
-  left:0;
-  bottom:0;
-  margin:0;
-  padding:0;
-  overflow:hidden;
-  border:0;
-  opacity:0;
-  pointer-events:none;
+.ddsh-enjoy-wrap .ddsh-commitflorolz{
+justify-content:center;
+margin-top:5px;
 }
-
-.ddshcomf-pf-youtube iframe {
-  display:block;
-  width:0;
-  height:0;
-  min-width:0;
-  min-height:0;
-  border:0;
-  margin:0;
-  padding:0;
 }
-
-.ddshcomf-pf-canvas .ddscomm-crz {
-  position:absolute;
-  bottom:5px;
-  left:50%;
-  transform:translateX(-50%);
-  width:130px;
-  height:13px;
-  margin:0;
-  padding:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  z-index:30;
-  background:transparent;
-  font-family:Arial,sans-serif;
+@media(max-width:350px){
+.ddsh-enjoy-heading{
+height:145px;
 }
-
-.ddshcomf-pf-canvas .ddscomm-crz span {
-  display:block;
-  width:11px;
-  height:10px;
-  overflow:hidden;
-  white-space:nowrap;
-  color:#999999;
-  font-size:7px;
-  font-weight:400;
-  line-height:10px;
-  letter-spacing:.7px;
-  text-align:left;
-  font-style:italic;
-  cursor:help;
-  user-select:none;
-  -webkit-user-select:none;
-  transition:width .35s ease,color .25s ease;
+.ddsh-enjoy-script{
+transform:translate(var(--de-title-x),var(--de-title-y)) scale(calc(var(--de-title-scale) * .65)) rotate(-7deg);
 }
-
-.ddshcomf-pf-canvas .ddscomm-crz span::before {
-  content:"✦ deepdeepsleepfranklin";
-  display:block;
-  white-space:nowrap;
-}
-
-.ddshcomf-pf-canvas .ddscomm-crz span:hover {
-  width:125px;
-  color:#999999;
-}
-
-@keyframes ddshcomf-pf-bars {
-  0% {
-    transform:scaleY(.25);
-  }
-
-  100% {
-    transform:scaleY(1);
-  }
-}
-
-@keyframes ddshcomf-pf-song-progress {
-  0% {
-    width:0%;
-  }
-
-  100% {
-    width:100%;
-  }
-}
-
-@container (max-width:470px) {
-  .ddshcomf-pf-player {
-    width:39%;
-    left:7%;
-    bottom:7%;
-    padding:1.3cqw;
-    gap:1.2cqw;
-  }
-
-  .ddshcomf-pf-cover {
-    width:8.5cqw;
-    height:8.5cqw;
-    flex-basis:8.5cqw;
-  }
-
-  .ddshcomf-pf-now {
-    font-size:1.4cqw;
-  }
-
-  .ddshcomf-pf-dot {
-    font-size:.9cqw;
-  }
-
-  .ddshcomf-pf-song-name {
-    font-size:2.25cqw;
-  }
-
-  .ddshcomf-pf-artist-name {
-    font-size:1.6cqw;
-  }
-
-  .ddshcomf-pf-spotify {
-    font-size:2.5cqw;
-  }
-
-  .ddshcomf-pf-name {
-    right:10%;
-    bottom:19%;
-    font-size:3.1cqw;
-  }
-}
-
-@media(max-width:480px) {
-  .ddshcomf-pf {
-    max-width:100%;
-  }
-
-  .ddshcomf-pf-canvas {
-    width:100%;
-  }
-
-  .ddshcomf-pf-canvas .ddscomm-crz {
-    bottom:5px;
-  }
-}
-
-@media(prefers-reduced-motion:reduce) {
-  .ddshcomf-pf-equalizer i,
-  .ddshcomf-pf-progress-fill {
-    animation:none;
-  }
-
-  .ddshcomf-pf-canvas .ddscomm-crz span {
-    transition:none;
-  }
 }
