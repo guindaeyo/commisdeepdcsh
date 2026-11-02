@@ -24,6 +24,7 @@
   position:relative;
   display:block;
   width:100%;
+  transform:translateY(-5%);
   aspect-ratio:1055/1414;
   overflow:hidden;
   isolation:isolate;
@@ -189,7 +190,7 @@
 
 .ddshcomf-pf-word2 {
   left:31%;
-  top:37%;
+  top:36%;
   z-index:11;
   font-size:19cqw;
   transform:rotate(-7deg);
