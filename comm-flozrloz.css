@@ -1,0 +1,322 @@
+
+@font-face{
+font-family:'DDSh SignPainter';
+src:url('https://raw.githubusercontent.com/guindaeyo/commisdeepdcsh/main/SignPainter%20HouseScript%20Regular.ttf') format('truetype');
+font-weight:400;
+font-style:normal;
+font-display:swap;
+}
+.ddshcomiflore-wrap{
+width:100%;
+max-width:650px;
+margin:0 auto;
+padding:0;
+box-sizing:border-box;
+}
+.ddshcomiflore{
+width:100%;
+margin:0;
+padding:0 0 25px;
+box-sizing:border-box;
+background:var(--de-bg);
+color:var(--de-text);
+font-family:'Bai Jamjuree',sans-serif;
+position:relative;
+overflow:hidden;
+}
+.ddshcomiflore-wrap *,
+.ddshcomiflore-wrap *::before,
+.ddshcomiflore-wrap *::after{
+box-sizing:border-box;
+}
+.ddshcomiflore-meta{
+position:absolute;
+top:10px;
+left:20px;
+font-family:'Roboto Mono',monospace;
+font-size:8px;
+letter-spacing:1px;
+color:var(--de-meta);
+z-index:8;
+}
+.ddshcomiflore-heading{
+height:207px;
+position:relative;
+z-index:5;
+pointer-events:none;
+}
+.ddshcomiflore-script{
+position:absolute;
+top:60px;
+left:14%;
+width:275px;
+height:185px;
+font-family:'DDSh SignPainter',cursive;
+font-weight:400;
+color:var(--de-script);
+transform:translate(var(--de-title-x),var(--de-title-y)) scale(var(--de-title-scale)) rotate(-7deg);
+transform-origin:top left;
+white-space:nowrap;
+}
+.ddshcomiflore-script span{
+display:block;
+position:absolute;
+letter-spacing:0;
+font-weight:400;
+}
+.ddshcomiflore-w1{
+top:0;
+left:0;
+font-size:103px;
+line-height:1;
+}
+.ddshcomiflore-w2{
+top:66px;
+left:10px;
+font-size:68px;
+line-height:1;
+}
+.ddshcomiflore-w3{
+top:95px;
+left:-20px;
+font-size:91px;
+line-height:1;
+}
+.ddshcomiflore-mark1,
+.ddshcomiflore-mark2{
+position:absolute;
+height:3px;
+background:var(--de-script);
+border-radius:50%;
+transform-origin:center center;
+}
+.ddshcomiflore-mark1{
+width:135px;
+top:194px;
+left:56px;
+transform:translateY(var(--de-mark1-y,0px)) rotate(var(--de-mark1-rotate,7deg));
+}
+.ddshcomiflore-mark2{
+width:109px;
+top:201px;
+left:70px;
+transform:translateY(var(--de-mark2-y,0px)) rotate(var(--de-mark2-rotate,7deg));
+}
+.ddshcomiflore-gallery{
+display:grid;
+grid-template-columns:repeat(3,minmax(0,1fr));
+gap:4px;
+width:100%;
+padding:0 0 18px;
+margin:0;
+position:relative;
+z-index:2;
+}
+.ddshcomiflore-frame{
+width:100%;
+min-width:0;
+aspect-ratio:1/1;
+position:relative;
+background:var(--de-frame);
+border:1px solid rgba(150,145,135,.13);
+padding:10px 5px 9px;
+box-shadow:0 1px 2px rgba(0,0,0,.018);
+}
+.ddshcomiflore-photo{
+width:100%;
+height:100%;
+background-size:cover;
+background-repeat:no-repeat;
+}
+.ddshcomiflore-photo1{
+background-image:var(--de-img1);
+background-position:var(--de-pos1);
+filter:var(--de-filter1);
+}
+.ddshcomiflore-photo2{
+background-image:var(--de-img2);
+background-position:var(--de-pos2);
+filter:var(--de-filter2);
+}
+.ddshcomiflore-photo3{
+background-image:var(--de-img3);
+background-position:var(--de-pos3);
+filter:var(--de-filter3);
+}
+.ddshcomiflore-tape{
+position:absolute;
+width:105px;
+height:19px;
+left:12px;
+bottom:-10px;
+z-index:6;
+background:
+repeating-linear-gradient(
+110deg,
+rgba(255,255,255,.16) 0px,
+rgba(255,255,255,.03) 2px,
+rgba(110,102,85,.04) 4px,
+rgba(255,255,255,.09) 6px
+),
+linear-gradient(
+90deg,
+rgba(230,226,212,.7),
+var(--de-tape),
+rgba(229,225,210,.65)
+);
+opacity:.68;
+transform:rotate(-5deg);
+clip-path:polygon(0 5%,100% 0,98% 95%,1% 100%);
+box-shadow:0 1px 2px rgba(0,0,0,.025);
+}
+.ddshcomiflore-tape::after{
+content:"";
+position:absolute;
+inset:0;
+background:repeating-linear-gradient(
+0deg,
+transparent 0px,
+rgba(255,255,255,.18) 1px,
+transparent 2px,
+transparent 4px
+);
+opacity:.5;
+}
+.ddshcomiflore-content{
+padding:47px 10% 0;
+}
+.ddshcomiflore-name{
+font-family:'Roboto Mono',monospace;
+font-size:12px;
+font-weight:500;
+letter-spacing:1px;
+text-transform:uppercase;
+color:var(--de-name);
+margin-bottom:24px;
+}
+.ddshcomiflore-roleplay{
+font-family:'Bai Jamjuree',sans-serif;
+font-size:15px;
+font-weight:400;
+line-height:1.9;
+text-align:justify;
+color:var(--de-text);
+overflow-wrap:anywhere;
+}
+.ddshcomiflore-roleplay p{
+margin:0 0 20px;
+}
+.ddshcomiflore-roleplay p:last-child{
+margin-bottom:0;
+}
+.ddshcomiflore-note{
+margin-top:38px;
+padding-top:15px;
+border-top:1px solid rgba(150,145,135,.18);
+display:flex;
+gap:18px;
+align-items:flex-start;
+}
+.ddshcomiflore-note span{
+font-family:'Roboto Mono',monospace;
+font-size:10px;
+font-weight:500;
+letter-spacing:1px;
+color:var(--de-name);
+white-space:nowrap;
+padding-top:5px;
+}
+.ddshcomiflore-note div{
+flex:1;
+min-width:0;
+font-family:'Bai Jamjuree',sans-serif;
+font-size:15px;
+font-weight:400;
+line-height:1.75;
+color:var(--de-note);
+overflow-wrap:anywhere;
+}
+.ddshcomiflore-wrap .ddsh-commitflorolz{
+display:flex;
+position:relative;
+align-items:center;
+justify-content:center;
+width:100%;
+height:10px;
+margin:5px 0 0;
+padding:0;
+font-family:'Bai Jamjuree',sans-serif;
+}
+.ddshcomiflore-wrap .ddsh-commitflorolz span{
+display:block;
+flex:0 0 auto;
+width:11px;
+height:10px;
+overflow:hidden;
+white-space:nowrap;
+color:#999999;
+font-size:7px;
+font-weight:400;
+line-height:10px;
+letter-spacing:.7px;
+text-align:left;
+font-style:italic;
+cursor:help;
+user-select:none;
+-webkit-user-select:none;
+transition:width .35s ease,color .25s ease;
+}
+.ddshcomiflore-wrap .ddsh-commitflorolz span::before{
+content:"✦ deepdeepsleepfranklin";
+display:block;
+white-space:nowrap;
+}
+.ddshcomiflore-wrap .ddsh-commitflorolz span:hover{
+width:125px;
+color:#999999;
+}
+@media(max-width:520px){
+.ddshcomiflore-heading{
+height:160px;
+}
+.ddshcomiflore-script{
+top:38px;
+left:15%;
+transform:translate(var(--de-title-x),var(--de-title-y)) scale(calc(var(--de-title-scale) * .75)) rotate(-7deg);
+}
+.ddshcomiflore-gallery{
+gap:3px;
+}
+.ddshcomiflore-frame{
+aspect-ratio:1/1;
+padding:6px 3px 5px;
+}
+.ddshcomiflore-photo{
+height:100%;
+}
+.ddshcomiflore-tape{
+width:65px;
+height:13px;
+left:6px;
+bottom:-7px;
+}
+.ddshcomiflore-content{
+padding:40px 9% 0;
+}
+.ddshcomiflore-meta{
+left:14px;
+font-size:7px;
+}
+.ddshcomiflore-wrap .ddsh-commitflorolz{
+justify-content:center;
+margin-top:5px;
+}
+}
+@media(max-width:350px){
+.ddshcomiflore-heading{
+height:145px;
+}
+.ddshcomiflore-script{
+transform:translate(var(--de-title-x),var(--de-title-y)) scale(calc(var(--de-title-scale) * .65)) rotate(-7deg);
+}
+}
