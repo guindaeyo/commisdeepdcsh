@@ -7,7 +7,7 @@ box-sizing:border-box;
 .ddskv3-wrap{
 position:relative;
 width:100%;
-max-width:100%;
+max-width:1200px;
 margin:40px auto 30px;
 padding:15px 15px 0 34px;
 font-family:'Bai Jamjuree',sans-serif;
@@ -170,7 +170,7 @@ z-index:1;
 position:relative;
 width:100%;
 height:auto;
-aspect-ratio:4/5;
+aspect-ratio:3/4;
 background-color:var(--sk-image-bg);
 overflow:hidden;
 }
@@ -249,6 +249,7 @@ color:#999999;
 @media(max-width:560px){
 .ddskv3-wrap{
 width:100%;
+max-width:100%;
 padding:15px 8px 0 20px;
 margin:35px auto 20px;
 }
@@ -317,7 +318,7 @@ padding:0 var(--sk-side-gap) var(--sk-side-gap);
 
 .ddskv3-main{
 height:auto;
-aspect-ratio:4/5;
+aspect-ratio:3/4;
 }
 
 .ddskv3-corner{
