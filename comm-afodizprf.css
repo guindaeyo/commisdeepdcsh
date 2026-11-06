@@ -7,7 +7,7 @@ box-sizing:border-box;
 .ddskv3-wrap{
 position:relative;
 width:100%;
-max-width:570px;
+max-width:100%;
 margin:40px auto 30px;
 padding:15px 15px 0 34px;
 font-family:'Bai Jamjuree',sans-serif;
@@ -40,7 +40,7 @@ pointer-events:none;
 .ddskv3-book{
 position:relative;
 width:100%;
-padding-top:30px;
+padding-top:clamp(25px,4vw,40px);
 background:var(--sk-bg);
 border:1px solid var(--sk-book-border);
 border-radius:3px;
@@ -77,7 +77,8 @@ display:flex;
 align-items:flex-start;
 justify-content:flex-end;
 width:calc(100% - 2 * var(--sk-side-gap));
-height:145px;
+min-height:145px;
+height:clamp(145px,24vw,220px);
 margin:0 auto;
 padding:15px 15px 14px;
 background:var(--sk-paper);
@@ -90,8 +91,9 @@ overflow:visible;
 position:absolute;
 top:var(--sk-circle-top);
 left:var(--sk-circle-left);
-width:var(--sk-circle-size);
-height:var(--sk-circle-size);
+width:clamp(125px,29%,var(--sk-circle-size));
+aspect-ratio:1/1;
+height:auto;
 flex-shrink:0;
 padding:0;
 border:var(--sk-circle-border-width) solid var(--sk-circle-border);
@@ -128,7 +130,7 @@ z-index:2;
 
 .ddskv3-title{
 font-family:'Fredoka',sans-serif;
-font-size:clamp(27px,5.5vw,43px);
+font-size:clamp(27px,5vw,52px);
 font-weight:700;
 line-height:1.1;
 letter-spacing:.5px;
@@ -139,7 +141,7 @@ white-space:nowrap;
 
 .ddskv3-brand{
 font-family:'DM Mono',monospace;
-font-size:8px;
+font-size:clamp(8px,1vw,11px);
 line-height:1.7;
 letter-spacing:.4px;
 color:var(--sk-brand);
@@ -148,7 +150,7 @@ text-align:right;
 
 .ddskv3-symbol{
 font-family:'Fredoka',sans-serif;
-font-size:17px;
+font-size:clamp(15px,2vw,21px);
 color:var(--sk-symbol);
 white-space:nowrap;
 text-align:right;
@@ -167,7 +169,8 @@ z-index:1;
 .ddskv3-main{
 position:relative;
 width:100%;
-height:540px;
+height:auto;
+aspect-ratio:4/5;
 background-color:var(--sk-image-bg);
 overflow:hidden;
 }
@@ -245,7 +248,7 @@ color:#999999;
 
 @media(max-width:560px){
 .ddskv3-wrap{
-width:calc(100% - 12px);
+width:100%;
 padding:15px 8px 0 20px;
 margin:35px auto 20px;
 }
@@ -277,13 +280,14 @@ border-width:2px;
 }
 
 .ddskv3-label{
-height:145px;
+min-height:125px;
+height:clamp(125px,32vw,155px);
 padding:10px;
 }
 
 .ddskv3-circle{
 width:min(var(--sk-circle-size),35vw);
-height:min(var(--sk-circle-size),35vw);
+height:auto;
 left:6px;
 top:8px;
 padding:0;
@@ -312,7 +316,8 @@ padding:0 var(--sk-side-gap) var(--sk-side-gap);
 }
 
 .ddskv3-main{
-height:400px;
+height:auto;
+aspect-ratio:4/5;
 }
 
 .ddskv3-corner{
