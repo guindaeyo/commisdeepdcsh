@@ -231,22 +231,59 @@ position:relative;
 height:100%;
 min-height:0;
 padding:18px 16px 18px 22px;
+background:var(--ddbk-paper);
+overflow:hidden;
+isolation:isolate;
+}
+
+.ddbk-page::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:44px;
+height:100%;
 background:
-linear-gradient(to right,transparent 0 42px,var(--ddbk-margin) 42px 43px,transparent 43px),
+linear-gradient(to right,
+var(--ddbk-paper) 0 42px,
+var(--ddbk-margin) 42px 43px,
+transparent 43px 44px);
+pointer-events:none;
+z-index:0;
+}
+
+.ddbk-page::after{
+content:"";
+position:absolute;
+top:0;
+left:43px;
+right:0;
+bottom:0;
+background:
 linear-gradient(var(--ddbk-grid) 1px,transparent 1px),
 linear-gradient(90deg,var(--ddbk-grid) 1px,transparent 1px);
-background-size:100% 100%,100% 26px,26px 100%;
-background-color:var(--ddbk-paper);
+background-size:100% 26px,26px 100%;
+background-position:0 0,0 0;
+pointer-events:none;
+z-index:0;
 }
 
 .ddbk-page-ring{
 position:absolute;
 top:0;
-left:14px;
-width:18px;
+left:8px;
+width:28px;
 height:100%;
 pointer-events:none;
-background:radial-gradient(circle at center,transparent 0 5px,var(--ddbk-ring) 5px 7px,transparent 7px) center 18px/18px 44px repeat-y;
+z-index:1;
+background:
+radial-gradient(circle at center,
+transparent 0 5px,
+var(--ddbk-ring) 5px 6.4px,
+transparent 6.4px);
+background-size:28px 40px;
+background-repeat:repeat-y;
+background-position:center 20px;
 }
 
 .ddbk-page-inner{
@@ -455,18 +492,39 @@ height:36px;
 
 .ddbk-page{
 padding:12px 10px 12px 12px;
+background:var(--ddbk-paper);
+overflow:hidden;
+}
+
+.ddbk-page::before{
+width:30px;
 background:
-linear-gradient(to right,transparent 0 28px,var(--ddbk-margin) 28px 29px,transparent 29px),
+linear-gradient(to right,
+var(--ddbk-paper) 0 28px,
+var(--ddbk-margin) 28px 29px,
+transparent 29px 30px);
+}
+
+.ddbk-page::after{
+left:29px;
+background:
 linear-gradient(var(--ddbk-grid) 1px,transparent 1px),
 linear-gradient(90deg,var(--ddbk-grid) 1px,transparent 1px);
-background-size:100% 100%,100% 22px,22px 100%;
-background-color:var(--ddbk-paper);
+background-size:100% 22px,22px 100%;
+background-position:0 0,0 0;
 }
 
 .ddbk-page-ring{
-left:7px;
-width:14px;
-background:radial-gradient(circle at center,transparent 0 4px,var(--ddbk-ring) 4px 5.5px,transparent 5.5px) center 12px/14px 34px repeat-y;
+left:5px;
+width:20px;
+background:
+radial-gradient(circle at center,
+transparent 0 3.8px,
+var(--ddbk-ring) 3.8px 5px,
+transparent 5px);
+background-size:20px 32px;
+background-repeat:repeat-y;
+background-position:center 14px;
 }
 
 .ddbk-page-inner{
@@ -548,6 +606,19 @@ font-size:10px;
 left:12px;
 width:34px;
 height:31px;
+}
+
+.ddbk-page-ring{
+left:4px;
+width:18px;
+background:
+radial-gradient(circle at center,
+transparent 0 3.4px,
+var(--ddbk-ring) 3.4px 4.5px,
+transparent 4.5px);
+background-size:18px 30px;
+background-repeat:repeat-y;
+background-position:center 13px;
 }
 
 .ddbk-name{
