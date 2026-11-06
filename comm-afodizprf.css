@@ -188,6 +188,7 @@ text-align:right;
 white-space:nowrap;
 position:relative;
 top:30px;
+right:10px;
 }
 
 .ddskv3-brand{
@@ -199,6 +200,7 @@ color:var(--sk-brand);
 text-align:right;
 margin-top:20px;
 margin-bottom:12px;
+margin-right:10px;
 }
 
 .ddskv3-symbol{
@@ -209,6 +211,7 @@ white-space:nowrap;
 text-align:right;
 position:relative;
 top:-20px;
+margin-right:10px;
 }
 
 .ddskv3-cover{
