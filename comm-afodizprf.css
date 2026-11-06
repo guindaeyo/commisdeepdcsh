@@ -363,17 +363,26 @@ height:clamp(125px,32vw,155px);
 padding:10px;
 }
 
+
 .ddskv3-circle{
-width:min(var(--sk-circle-size),35vw);
-height:min(var(--sk-circle-size),35vw);
+width:min(var(--sk-circle-size),28vw);
+height:min(var(--sk-circle-size),28vw);
+aspect-ratio:1/1;
 left:6px;
 top:8px;
+padding:0;
+}
+
+.ddskv3-curve{
+top:0;
+left:4px;
 }
 
 .ddskv3-curve text{
 font-size:15px;
 letter-spacing:1.5px;
 }
+
 
 .ddskv3-label-right{
 width:calc(100% - 28%);
