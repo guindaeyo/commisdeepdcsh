@@ -8,7 +8,7 @@ box-sizing:border-box;
 .rr-sign{
 position:relative;
 width:100%;
-max-width:1050px;
+max-width:750px;
 margin:25px auto;
 font-family:'DM Sans',sans-serif;
 container-type:inline-size;
@@ -297,7 +297,7 @@ letter-spacing:-.25cqw;
 font:400 9.1cqw/.85 'Allura',cursive;
 color:var(--rr-accent);
 margin-left:-.5cqw;
-transform:translate(15px,15px) rotate(-5deg);
+transform:translate(10px,8px) rotate(-5deg);
 }
 
 .rr-mid{
