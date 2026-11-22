@@ -1,0 +1,307 @@
+.commitarzpfo-poster,
+.commitarzpfo-poster *,
+.commitarzpfo-poster *::before,
+.commitarzpfo-poster *::after{
+box-sizing:border-box;
+}
+
+.commitarzpfo-poster{
+position:relative;
+width:100%;
+max-width:850px;
+aspect-ratio:736/920;
+margin:25px auto 0;
+background:var(--commitarzpfo-bg);
+color:var(--commitarzpfo-text);
+font-family:'Barlow Condensed',sans-serif;
+container-type:inline-size;
+isolation:isolate;
+overflow:hidden;
+}
+
+.commitarzpfo-poster::after{
+content:"";
+position:absolute;
+inset:0;
+z-index:20;
+pointer-events:none;
+opacity:.075;
+background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+mix-blend-mode:multiply;
+}
+
+.commitarzpfo-photo{
+position:absolute;
+left:14.4%;
+top:26.3%;
+width:70%;
+height:55.4%;
+background:var(--commitarzpfo-photo-bg);
+border:var(--commitarzpfo-photo-border-size) solid var(--commitarzpfo-photo-border);
+overflow:hidden;
+z-index:1;
+transform:rotate(var(--commitarzpfo-photo-rotate));
+transform-origin:center;
+}
+
+.commitarzpfo-photo img{
+display:block;
+width:100%;
+height:100%;
+object-fit:cover;
+object-position:var(--commitarzpfo-img-x) var(--commitarzpfo-img-y);
+transform:scale(var(--commitarzpfo-img-zoom));
+transform-origin:center;
+}
+
+.commitarzpfo-top{
+position:absolute;
+left:3%;
+top:3.8%;
+width:61.5%;
+height:19%;
+background:var(--commitarzpfo-blue);
+color:var(--commitarzpfo-white);
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+z-index:5;
+transform:rotate(var(--commitarzpfo-top-rotate));
+transform-origin:center;
+}
+
+.commitarzpfo-top span{
+display:block;
+font-family:'Anton',sans-serif;
+font-size:22.5cqw;
+line-height:1;
+letter-spacing:-.045em;
+white-space:nowrap;
+transform:scaleX(1.08);
+}
+
+.commitarzpfo-topnote{
+position:absolute;
+right:4.5%;
+top:9.5%;
+width:27%;
+font-family:'Anton',sans-serif;
+font-size:3.35cqw;
+line-height:1.15;
+text-align:center;
+color:var(--commitarzpfo-text);
+z-index:3;
+transform:rotate(2deg);
+}
+
+.commitarzpfo-second{
+position:absolute;
+right:2%;
+top:20.8%;
+width:50.8%;
+height:13%;
+background:var(--commitarzpfo-blue);
+color:var(--commitarzpfo-white);
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+z-index:6;
+transform:rotate(var(--commitarzpfo-second-rotate));
+transform-origin:center;
+}
+
+.commitarzpfo-second span{
+display:block;
+font-family:'Anton',sans-serif;
+font-size:13cqw;
+line-height:1;
+letter-spacing:-.025em;
+white-space:nowrap;
+transform:scaleX(.88);
+}
+
+.commitarzpfo-info{
+position:absolute;
+left:5.7%;
+top:62.3%;
+width:34.2%;
+height:22.3%;
+padding:2.5% 2.1%;
+background:var(--commitarzpfo-blue);
+color:var(--commitarzpfo-white);
+z-index:8;
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+overflow:hidden;
+transform:rotate(var(--commitarzpfo-info-rotate));
+transform-origin:center;
+}
+
+.commitarzpfo-info-small{
+font-family:'Anton',sans-serif;
+font-size:3.1cqw;
+line-height:1.2;
+}
+
+.commitarzpfo-info-big{
+font-family:'Anton',sans-serif;
+font-size:6.6cqw;
+line-height:1;
+margin-top:4%;
+letter-spacing:-.03em;
+white-space:nowrap;
+transform:scaleX(.82);
+transform-origin:left center;
+}
+
+.commitarzpfo-info-bottom{
+font-family:'Anton',sans-serif;
+font-size:4.8cqw;
+line-height:1.1;
+margin-top:auto;
+align-self:flex-end;
+white-space:nowrap;
+}
+
+.commitarzpfo-bottom-left{
+position:absolute;
+left:7.3%;
+bottom:4.5%;
+width:34%;
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+color:var(--commitarzpfo-text);
+z-index:9;
+transform:rotate(-2deg);
+}
+
+.commitarzpfo-bottom-left span{
+font-family:'Anton',sans-serif;
+font-size:8cqw;
+line-height:1;
+letter-spacing:-.04em;
+}
+
+.commitarzpfo-bottom-left small{
+font-family:'Barlow Condensed',sans-serif;
+font-weight:800;
+font-size:2.15cqw;
+line-height:1.2;
+letter-spacing:.025em;
+}
+
+.commitarzpfo-bottom-center{
+position:absolute;
+left:40%;
+bottom:9%;
+width:31%;
+text-align:center;
+color:var(--commitarzpfo-text);
+z-index:9;
+transform:rotate(1.5deg);
+}
+
+.commitarzpfo-bottom-center div{
+font-family:'Anton',sans-serif;
+font-size:4.2cqw;
+line-height:1.1;
+white-space:nowrap;
+}
+
+.commitarzpfo-bottom-center span{
+display:block;
+font-family:'Barlow Condensed',sans-serif;
+font-size:2.6cqw;
+font-weight:900;
+line-height:1.2;
+letter-spacing:.02em;
+}
+
+.commitarzpfo-date{
+position:absolute;
+right:4.5%;
+bottom:3.6%;
+width:22%;
+height:21%;
+background:var(--commitarzpfo-blue);
+color:var(--commitarzpfo-white);
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+align-items:center;
+padding:1.1%;
+z-index:10;
+overflow:hidden;
+transform:rotate(var(--commitarzpfo-date-rotate));
+transform-origin:center;
+}
+
+.commitarzpfo-date strong{
+font-family:'Anton',sans-serif;
+font-weight:400;
+font-size:12.5cqw;
+line-height:1.05;
+letter-spacing:-.05em;
+white-space:nowrap;
+transform:scaleX(.78);
+}
+
+.commitarzpfo-date span{
+font-family:'Barlow Condensed',sans-serif;
+font-size:2.7cqw;
+font-weight:900;
+line-height:1.1;
+text-align:center;
+white-space:nowrap;
+}
+
+.commitarzpfo-date span:last-child{
+margin-top:2%;
+font-size:2.35cqw;
+}
+
+.ddscomm-craaz{
+width:min(630px,100%);
+height:13px;
+margin:5px auto 25px;
+display:flex;
+align-items:flex-start;
+justify-content:center;
+position:relative;
+z-index:5;
+background:transparent;
+font-family:Arial,sans-serif;
+}
+
+.ddscomm-craaz span{
+width:11px;
+height:10px;
+display:block;
+overflow:hidden;
+white-space:nowrap;
+color:#999999;
+font-size:7px;
+font-weight:400;
+line-height:10px;
+letter-spacing:.7px;
+text-align:left;
+font-style:italic;
+cursor:help;
+user-select:none;
+-webkit-user-select:none;
+transition:width .35s ease,color .25s ease;
+}
+
+.ddscomm-craaz span::before{
+content:"✦ deepdeepsleepfranklin";
+display:block;
+}
+
+.ddscomm-craaz span:hover{
+width:110px;
+color:#999999;
+}
