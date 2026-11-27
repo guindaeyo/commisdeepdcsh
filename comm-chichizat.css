@@ -64,7 +64,7 @@ height:auto;
 max-height:none;
 object-fit:contain;
 margin:0;
-margin-top:-18%;
+margin-top:var(--ddschchichiz-banner-crop,-18%);
 padding:0;
 border:0;
 border-radius:0;
@@ -932,6 +932,7 @@ width:100%;
 height:auto;
 max-height:none;
 object-fit:contain;
+margin-top:var(--ddschchichiz-banner-crop,-18%);
 }
 
 .ddschchichiz-title{
